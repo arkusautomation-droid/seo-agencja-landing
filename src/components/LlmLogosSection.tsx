@@ -149,10 +149,9 @@ const llmLogos: { name: string; icon: React.ReactNode }[] = [
   },
 ];
 
-/* Duplicate for seamless marquee */
+/* Duplicate for seamless marquee — 2 rows */
 const row1 = llmLogos.slice(0, 8);
-const row2 = llmLogos.slice(5, 13);
-const row3 = [...llmLogos.slice(10), ...llmLogos.slice(0, 3)];
+const row2 = [...llmLogos.slice(7), ...llmLogos.slice(0, 1)];
 
 function LogoCard({ name, icon }: { name: string; icon: React.ReactNode }) {
   return (
@@ -208,7 +207,6 @@ export default function LlmLogosSection() {
         <div className="flex flex-col gap-2.5 reveal">
           <MarqueeRow logos={row1} dir="left" speed={35} />
           <MarqueeRow logos={row2} dir="right" speed={30} />
-          <MarqueeRow logos={row3} dir="left" speed={38} />
         </div>
       </div>
 

@@ -291,10 +291,7 @@ export default function PricingSection() {
 
   return (
     <section id="pakiety" className="relative" data-glow="blue">
-      {/* Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[radial-gradient(50%_50%,rgba(155,98,255,0.08)_0%,transparent_100%)] pointer-events-none" />
-
-      <div className="container relative z-10">
+      <div className="container">
         <div className="section-badge mx-auto flex justify-center reveal">
           <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
             <rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" strokeWidth="1.5" />
