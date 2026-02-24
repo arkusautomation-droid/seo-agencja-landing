@@ -211,7 +211,7 @@ const recBadgeColors: Record<TabId, string> = {
 function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
   const c = tabColors[tab];
   return (
-    <div className={`relative p-7 rounded-2xl transition-all duration-300 hover:-translate-y-1 ${
+    <div className={`relative p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 ${
       plan.recommended
         ? `bg-bg-card border-2 ${c.borderRec} ${c.shadowRec}`
         : "glass-card"
@@ -222,11 +222,11 @@ function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
         </div>
       )}
 
-      <div className={`text-xs uppercase tracking-[1.5px] font-bold mb-1.5 ${c.accent}`}>{plan.name}</div>
-      <div className="text-[34px] font-bold mb-1 leading-tight">
+      <div className={`text-xs uppercase tracking-[1.5px] font-bold mb-2 ${c.accent}`}>{plan.name}</div>
+      <div className="text-[34px] font-bold mb-1.5 leading-tight">
         {plan.price} <span className="text-sm text-text-dim font-normal">{`z\u0142 / mies.`}</span>
       </div>
-      <div className="text-xs text-text-muted mb-5 leading-snug">{plan.target}</div>
+      <div className="text-xs text-text-muted mb-6 leading-snug">{plan.target}</div>
 
       {plan.kpis.map((kpi, i) => (
         <div key={i} className={`rounded-lg p-3 px-3.5 ${c.border} border ${c.subtle} ${i > 0 ? "mt-1.5" : ""} mb-1.5`}>
@@ -236,14 +236,14 @@ function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
         </div>
       ))}
 
-      <hr className="border-t border-[rgba(255,255,255,0.06)] my-5" />
+      <hr className="border-t border-[rgba(255,255,255,0.06)] my-6" />
 
       {plan.oneTime && (
         <>
-          <div className="text-[10px] uppercase tracking-[1.2px] text-text-muted font-semibold mb-2">{plan.oneTimeLabel}</div>
-          <ul className="list-none mb-3">
+          <div className="text-[10px] uppercase tracking-[1.2px] text-text-muted font-semibold mb-2.5">{plan.oneTimeLabel}</div>
+          <ul className="list-none mb-4">
             {plan.oneTime.map((item, i) => (
-              <li key={i} className="text-[12.5px] py-[4px] text-text-secondary flex items-start gap-2 leading-snug">
+              <li key={i} className="text-[12.5px] py-[5px] text-text-secondary flex items-start gap-2.5 leading-snug">
                 <span className={`font-bold shrink-0 mt-px text-[11px] ${c.checkColor}`}>&#10003;</span>
                 {item}
               </li>
@@ -254,10 +254,10 @@ function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
 
       {plan.recurring && (
         <>
-          <div className="text-[10px] uppercase tracking-[1.2px] text-text-muted font-semibold mb-2">{plan.recurringLabel}</div>
-          <ul className="list-none mb-3">
+          <div className="text-[10px] uppercase tracking-[1.2px] text-text-muted font-semibold mb-2.5">{plan.recurringLabel}</div>
+          <ul className="list-none mb-4">
             {plan.recurring.map((item, i) => (
-              <li key={i} className="text-[12.5px] py-[4px] text-text-secondary flex items-start gap-2 leading-snug">
+              <li key={i} className="text-[12.5px] py-[5px] text-text-secondary flex items-start gap-2.5 leading-snug">
                 <span className={`font-bold shrink-0 mt-px text-[11px] ${c.checkColor}`}>&#10003;</span>
                 {item}
               </li>
@@ -267,9 +267,9 @@ function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
       )}
 
       {plan.items && (
-        <ul className="list-none mb-3">
+        <ul className="list-none mb-4">
           {plan.items.map((item, i) => (
-            <li key={i} className="text-[12.5px] py-[4px] text-text-secondary flex items-start gap-2 leading-snug">
+            <li key={i} className="text-[12.5px] py-[5px] text-text-secondary flex items-start gap-2.5 leading-snug">
               <span className={`font-bold shrink-0 mt-px text-[11px] ${c.checkColor}`}>&#10003;</span>
               {item}
             </li>
@@ -309,7 +309,7 @@ export default function PricingSection() {
         </p>
 
         {/* Tabs */}
-        <div className="flex justify-center mb-20">
+        <div className="flex justify-center mb-14">
           <div className="pricing-tabs-container inline-flex gap-2 p-2 rounded-full bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.06)]">
             {tabDefs.map((t) => (
               <button
@@ -329,7 +329,7 @@ export default function PricingSection() {
         </div>
 
         {/* Plans grid */}
-        <div key={activeTab} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-start pricing-content-enter">
+        <div key={activeTab} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start pricing-content-enter">
           {tabPlans[activeTab].map((plan, i) => (
             <PlanCard key={`${activeTab}-${i}`} plan={plan} tab={activeTab} />
           ))}
