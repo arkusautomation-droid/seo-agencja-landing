@@ -81,7 +81,7 @@ export default function BenefitsSection() {
           </svg>
           {"Korzyści"}
         </div>
-        <h2 className="section-title reveal">Co konkretnie zyskujesz</h2>
+        <h2 className="section-title text-gradient-white-orange reveal">Co konkretnie zyskujesz</h2>
         <p className="section-sub reveal">
           {"Nie lista czynności \u2014 lista wyników, które wpływają na Twój biznes"}
         </p>

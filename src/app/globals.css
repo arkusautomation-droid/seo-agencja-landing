@@ -335,6 +335,15 @@ section {
   background-clip: text;
 }
 
+/* White → orange gradient — hero-style fade for section titles */
+.text-gradient-white-orange {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 25%, #f9a046 60%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+}
+
 /* VS Section — card glow effects */
 .vs-card-old {
   position: relative;
