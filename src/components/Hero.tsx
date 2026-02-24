@@ -1,7 +1,7 @@
 const stats = [
   { num: "96,3%", label: "Polaków korzysta z Google" },
   { num: "46%", label: "zapytań to lokalne" },
-  { num: "91,8%", label: "fraz to long tail" },
+  { num: "23%", label: "Polaków szuka w AI" },
   { num: "14,6%", label: "konwersja z SEO" },
 ];
 

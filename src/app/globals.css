@@ -344,6 +344,15 @@ section {
   text-shadow: none;
 }
 
+/* White → blue gradient — hero-style fade for section titles */
+.text-gradient-white-blue {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 25%, #60a5fa 60%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+}
+
 /* White → green gradient — hero-style fade for section titles */
 .text-gradient-white-green {
   background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 25%, #4ade80 60%, #22c55e 100%);

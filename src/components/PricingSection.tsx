@@ -211,22 +211,22 @@ const recBadgeColors: Record<TabId, string> = {
 function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
   const c = tabColors[tab];
   return (
-    <div className={`relative p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 ${
+    <div className={`relative p-7 rounded-2xl transition-all duration-300 hover:-translate-y-1 ${
       plan.recommended
         ? `bg-bg-card border-2 ${c.borderRec} ${c.shadowRec}`
         : "glass-card"
     }`}>
       {plan.recommended && (
-        <div className={`inline-block text-[10px] font-bold py-1 px-4 rounded-full tracking-[0.8px] whitespace-nowrap text-white mb-3 ${recBadgeColors[tab]}`}>
+        <div className={`inline-block text-[10px] font-bold py-1 px-4 rounded-full tracking-[0.8px] whitespace-nowrap text-white mb-4 ${recBadgeColors[tab]}`}>
           REKOMENDOWANY
         </div>
       )}
 
-      <div className={`text-xs uppercase tracking-[1.5px] font-bold mb-1 ${c.accent}`}>{plan.name}</div>
-      <div className="text-[34px] font-bold mb-0.5 leading-tight">
+      <div className={`text-xs uppercase tracking-[1.5px] font-bold mb-1.5 ${c.accent}`}>{plan.name}</div>
+      <div className="text-[34px] font-bold mb-1 leading-tight">
         {plan.price} <span className="text-sm text-text-dim font-normal">{`z\u0142 / mies.`}</span>
       </div>
-      <div className="text-xs text-text-muted mb-4 leading-snug">{plan.target}</div>
+      <div className="text-xs text-text-muted mb-5 leading-snug">{plan.target}</div>
 
       {plan.kpis.map((kpi, i) => (
         <div key={i} className={`rounded-lg p-3 px-3.5 ${c.border} border ${c.subtle} ${i > 0 ? "mt-1.5" : ""} mb-1.5`}>
@@ -236,14 +236,14 @@ function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
         </div>
       ))}
 
-      <hr className="border-t border-[rgba(255,255,255,0.06)] my-4" />
+      <hr className="border-t border-[rgba(255,255,255,0.06)] my-5" />
 
       {plan.oneTime && (
         <>
           <div className="text-[10px] uppercase tracking-[1.2px] text-text-muted font-semibold mb-2">{plan.oneTimeLabel}</div>
           <ul className="list-none mb-3">
             {plan.oneTime.map((item, i) => (
-              <li key={i} className="text-[12.5px] py-[3px] text-text-secondary flex items-start gap-2 leading-snug">
+              <li key={i} className="text-[12.5px] py-[4px] text-text-secondary flex items-start gap-2 leading-snug">
                 <span className={`font-bold shrink-0 mt-px text-[11px] ${c.checkColor}`}>&#10003;</span>
                 {item}
               </li>
@@ -257,7 +257,7 @@ function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
           <div className="text-[10px] uppercase tracking-[1.2px] text-text-muted font-semibold mb-2">{plan.recurringLabel}</div>
           <ul className="list-none mb-3">
             {plan.recurring.map((item, i) => (
-              <li key={i} className="text-[12.5px] py-[3px] text-text-secondary flex items-start gap-2 leading-snug">
+              <li key={i} className="text-[12.5px] py-[4px] text-text-secondary flex items-start gap-2 leading-snug">
                 <span className={`font-bold shrink-0 mt-px text-[11px] ${c.checkColor}`}>&#10003;</span>
                 {item}
               </li>
@@ -269,7 +269,7 @@ function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
       {plan.items && (
         <ul className="list-none mb-3">
           {plan.items.map((item, i) => (
-            <li key={i} className="text-[12.5px] py-[3px] text-text-secondary flex items-start gap-2 leading-snug">
+            <li key={i} className="text-[12.5px] py-[4px] text-text-secondary flex items-start gap-2 leading-snug">
               <span className={`font-bold shrink-0 mt-px text-[11px] ${c.checkColor}`}>&#10003;</span>
               {item}
             </li>
@@ -299,7 +299,11 @@ export default function PricingSection() {
           </svg>
           Cennik
         </div>
-        <h2 className="section-title reveal">Pakiety z konkretnymi celami wzrostu</h2>
+        <h2 className={`section-title reveal ${
+          activeTab === "local" ? "text-gradient" :
+          activeTab === "country" ? "text-gradient-white-blue" :
+          "text-gradient-white-green"
+        }`}>Pakiety z konkretnymi celami wzrostu</h2>
         <p className="section-sub reveal">
           {"Ka\u017Cdy pakiet = konkretny KPI, kt\u00F3ry mierzysz. Umowa bezterminowa, 1-miesi\u0119czne wypowiedzenie."}
         </p>
