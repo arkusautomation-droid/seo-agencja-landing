@@ -38,15 +38,16 @@ export default function VsSection() {
         <p className="section-sub reveal">
           {"Typowe oferty SEO mierzą pozycje. My mierzymy Twój przychód."}
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-[960px] mx-auto reveal-stagger">
+        <div className="grid grid-cols-1 sm:grid-cols-2 reveal-stagger" style={{ gap: 25, maxWidth: 960, marginLeft: "auto", marginRight: "auto" }}>
           {cards.map((c, i) => (
             <div
               key={i}
-              className={`glass-card p-7 rounded-xl transition-all duration-300 ${
+              className={`glass-card rounded-xl transition-all duration-300 ${
                 c.type === "old"
                   ? "border-l-3 border-l-red vs-card-old"
                   : "border-l-3 border-l-green vs-card-new"
               }`}
+              style={{ padding: 33 }}
             >
               <div
                 className={`inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[1.5px] mb-4 font-semibold px-2.5 py-1 rounded-full ${

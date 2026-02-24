@@ -11,7 +11,7 @@ const rows = [
 
 export default function CompareSection() {
   return (
-    <section className="relative" data-glow="green">
+    <section className="relative" data-glow="green" style={{ paddingBottom: 0 }}>
       <div className="container">
         <div className="section-badge mx-auto flex justify-center reveal">
           <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
@@ -21,7 +21,7 @@ export default function CompareSection() {
         </div>
         <h2 className="section-title reveal">AdAwards vs typowa agencja SEO</h2>
         <p className="section-sub reveal">{"Konkretne różnice, które widzisz w wynikach"}</p>
-        <div className="overflow-x-auto rounded-2xl border border-border reveal">
+        <div className="overflow-x-auto rounded-2xl border border-border reveal" style={{ maxWidth: 960, marginLeft: "auto", marginRight: "auto" }}>
           <table className="w-full border-collapse text-[13px] max-sm:text-[11px]">
             <thead>
               <tr className="bg-[rgba(155,98,255,0.04)]">

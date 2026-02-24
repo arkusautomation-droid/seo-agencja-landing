@@ -10,11 +10,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AD Awards — Oferta SEO 2026",
+  title: "AD Awards — Oferta SEO + GEO 2026",
   description:
     "Profesjonalne SEO, które przynosi klientów, nie raporty. Mierzalne efekty, bezterminowa umowa, 1-miesięczne wypowiedzenie.",
   openGraph: {
-    title: "AD Awards — Oferta SEO 2026",
+    title: "AD Awards — Oferta SEO + GEO 2026",
     description:
       "SEO, które przynosi klientów, nie raporty. Mierzalne efekty, bezterminowa umowa.",
     type: "website",
@@ -28,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl">
-      <body className={`${inter.variable} antialiased`}>
+    <html lang="pl" style={{ overflowX: "hidden" }}>
+      <body className={`${inter.variable} antialiased`} style={{ overflowX: "hidden" }}>
         {children}
       </body>
     </html>

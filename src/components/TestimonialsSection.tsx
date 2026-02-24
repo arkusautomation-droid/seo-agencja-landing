@@ -98,19 +98,6 @@ export default function TestimonialsSection() {
         </div>
       </div>
 
-      <style>{`
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-33.333%); }
-        }
-        .animate-marquee {
-          animation: marquee 30s linear infinite;
-          width: max-content;
-        }
-        .animate-marquee:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
     </section>
   );
 }

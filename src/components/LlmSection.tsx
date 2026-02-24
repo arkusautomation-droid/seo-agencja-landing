@@ -21,8 +21,8 @@ function ListItem({ icon, title, desc, color }: { icon: React.ReactNode; title: 
     ? "bg-blue-glow text-blue border border-[rgba(59,130,246,0.15)]"
     : "bg-accent-glow text-accent-light border border-[rgba(155,98,255,0.15)]";
   return (
-    <li className="text-[13px] py-2.5 border-b border-[rgba(155,98,255,0.06)] last:border-b-0 flex items-start gap-3 text-text-secondary">
-      <span className={`shrink-0 w-[24px] h-[24px] rounded-md flex items-center justify-center mt-px ${icoClass}`}>
+    <li className="text-[13.5px] py-4 border-b border-[rgba(155,98,255,0.06)] last:border-b-0 flex items-start gap-3.5 text-text-secondary leading-relaxed">
+      <span className={`shrink-0 w-[26px] h-[26px] rounded-md flex items-center justify-center mt-0.5 ${icoClass}`}>
         {icon}
       </span>
       <span>
@@ -76,7 +76,7 @@ export default function LlmSection() {
         </div>
 
         {/* Summary */}
-        <div className="mt-6 py-5 px-6 rounded-xl bg-gradient-to-r from-[rgba(59,130,246,0.06)] to-[rgba(155,98,255,0.06)] border border-[rgba(155,98,255,0.12)] text-center">
+        <div className="mt-6 py-5 px-6 rounded-xl bg-gradient-to-r from-[rgba(59,130,246,0.06)] to-[rgba(155,98,255,0.06)] border border-[rgba(155,98,255,0.12)] text-center" style={{ maxWidth: 960, marginLeft: "auto", marginRight: "auto" }}>
           <p className="text-sm text-text-dim leading-relaxed">
             <strong className="text-text-secondary">
               {"Każdy pakiet zawiera optymalizację techniczną pod Google."}

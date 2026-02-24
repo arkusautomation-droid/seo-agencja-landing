@@ -18,7 +18,7 @@ const cards = [
 
 export default function RoiSection() {
   return (
-    <section className="relative" data-glow="orange">
+    <section className="relative" data-glow="orange" style={{ paddingTop: 10 }}>
       {/* Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[radial-gradient(50%_50%,rgba(155,98,255,0.06)_0%,transparent_100%)] pointer-events-none" />
 

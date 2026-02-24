@@ -32,7 +32,7 @@ export default function Footer() {
           <p>
             {"AdAwards · Marcin Bielaczyc · Marcin Siwonia · Jakub Płóciennik · Renata Kieruzal · Dawid Płóciennik"}
           </p>
-          <p className="pt-3 text-[10px] text-text-muted/50">
+          <p className="pt-3 text-[10px] text-text-dim">
             {"© 2026 AdAwards. Wszelkie prawa zastrzeżone."}
           </p>
         </div>

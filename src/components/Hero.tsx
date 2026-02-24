@@ -23,7 +23,7 @@ export default function Hero() {
           <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
             <path d="M8 1l2 5h5l-4 3 2 5-5-3-5 3 2-5-4-3h5z" fill="currentColor" />
           </svg>
-          Oferta SEO &middot; Luty 2026
+          Oferta SEO + GEO 2026
         </div>
 
         <h1 className="text-[clamp(36px,5.5vw,64px)] font-bold leading-[1.1] mb-6 tracking-[-0.03em]">
@@ -32,7 +32,7 @@ export default function Hero() {
           <span className="text-gradient">{"klientów, nie raporty"}</span>
         </h1>
 
-        <p className="text-lg text-text-dim max-w-[640px] mx-auto mb-16 leading-relaxed text-center">
+        <p className="text-lg text-text-dim mb-16 leading-relaxed text-center" style={{ maxWidth: 640, marginLeft: "auto", marginRight: "auto" }}>
           {"Nie sprzedajemy pozycji fraz — sprzedajemy realny wzrost ruchu, zapytań i przychodów z Google. Mierzysz efekty, nie obietnice."}
         </p>
 

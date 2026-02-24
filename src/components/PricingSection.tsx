@@ -299,12 +299,12 @@ export default function PricingSection() {
           </svg>
           Cennik
         </div>
-        <h2 className={`section-title reveal ${
+        <h2 className={`section-title visible ${
           activeTab === "local" ? "text-gradient-white-purple" :
           activeTab === "country" ? "text-gradient-white-blue" :
           "text-gradient-white-green"
         }`}>Pakiety z konkretnymi celami wzrostu</h2>
-        <p className={`section-sub reveal transition-colors duration-300 ${
+        <p className={`section-sub visible transition-colors duration-300 ${
           activeTab === "local" ? "!text-accent-light" :
           activeTab === "country" ? "!text-blue" :
           "!text-green"
@@ -313,7 +313,7 @@ export default function PricingSection() {
         </p>
 
         {/* Tabs */}
-        <div className="flex justify-center mb-14">
+        <div className="flex justify-center" style={{ marginBottom: 50 }}>
           <div className="pricing-tabs-container inline-flex gap-2 p-2 rounded-full bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.06)]">
             {tabDefs.map((t) => (
               <button
@@ -333,7 +333,7 @@ export default function PricingSection() {
         </div>
 
         {/* Plans grid */}
-        <div key={activeTab} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start pricing-content-enter">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
           {tabPlans[activeTab].map((plan, i) => (
             <PlanCard key={`${activeTab}-${i}`} plan={plan} tab={activeTab} />
           ))}
