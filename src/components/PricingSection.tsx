@@ -304,10 +304,10 @@ export default function PricingSection() {
           activeTab === "country" ? "text-gradient-white-blue" :
           "text-gradient-white-green"
         }`}>Pakiety z konkretnymi celami wzrostu</h2>
-        <p className={`section-sub reveal ${
-          activeTab === "local" ? "text-gradient" :
-          activeTab === "country" ? "text-gradient-white-blue" :
-          "text-gradient-white-green"
+        <p className={`section-sub reveal transition-colors duration-300 ${
+          activeTab === "local" ? "!text-accent-light" :
+          activeTab === "country" ? "!text-blue" :
+          "!text-green"
         }`}>
           {"Ka\u017Cdy pakiet = konkretny KPI, kt\u00F3ry mierzysz. Umowa bezterminowa, 1-miesi\u0119czne wypowiedzenie."}
         </p>
