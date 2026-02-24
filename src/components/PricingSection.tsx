@@ -325,7 +325,7 @@ export default function PricingSection() {
         </div>
 
         {/* Plans grid */}
-        <div key={activeTab} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-start pricing-content-enter">
+        <div key={activeTab} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-start pricing-content-enter">
           {tabPlans[activeTab].map((plan, i) => (
             <PlanCard key={`${activeTab}-${i}`} plan={plan} tab={activeTab} />
           ))}

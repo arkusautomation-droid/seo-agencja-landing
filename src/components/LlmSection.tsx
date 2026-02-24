@@ -43,7 +43,7 @@ export default function LlmSection() {
           </svg>
           Technologia
         </div>
-        <h2 className="section-title reveal">Optymalizacja pod Google i czaty AI</h2>
+        <h2 className="section-title text-gradient-white-green reveal">Optymalizacja pod Google i czaty AI</h2>
         <p className="section-sub reveal">
           {"W 2026 klienci szukają dwoma drogami \u2014 przez Google i przez AI. Optymalizujemy obie."}
         </p>

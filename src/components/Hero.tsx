@@ -7,7 +7,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="pt-36 pb-20 text-center relative overflow-hidden border-t-0!">
+    <section className="pt-36 pb-10 text-center relative overflow-hidden border-t-0!">
       {/* Grid pattern */}
       <div className="absolute inset-0 bg-grid opacity-60" />
 
@@ -17,7 +17,7 @@ export default function Hero() {
       {/* Secondary glow — pink accent */}
       <div className="absolute top-[100px] right-[10%] w-[400px] h-[400px] bg-[radial-gradient(50%_50%,rgba(236,72,153,0.15)_0%,transparent_100%)] pointer-events-none" />
 
-      <div className="container relative z-10 reveal">
+      <div className="container relative z-10 text-center reveal">
         {/* Badge */}
         <div className="section-badge mx-auto mb-8">
           <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
@@ -32,7 +32,7 @@ export default function Hero() {
           <span className="text-gradient">{"klientów, nie raporty"}</span>
         </h1>
 
-        <p className="text-lg text-text-dim max-w-[600px] mx-auto mb-12 leading-relaxed">
+        <p className="text-lg text-text-dim max-w-[600px] mx-auto mb-12 leading-relaxed text-center">
           Nie sprzedajemy pozycji fraz — sprzedajemy realny wzrost ruchu,
           {"zapytań i przychodów z Google. Mierzysz efekty, nie obietnice."}
         </p>

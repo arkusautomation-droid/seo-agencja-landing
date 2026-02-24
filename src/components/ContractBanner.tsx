@@ -1,6 +1,6 @@
 export default function ContractBanner() {
   return (
-    <section className="pt-0 pb-10">
+    <section className="!pt-0 !pb-0">
       <div className="container">
         <div className="contract-pulse max-w-[900px] mx-auto p-8 sm:p-10 rounded-2xl relative overflow-hidden bg-gradient-to-br from-[rgba(155,98,255,0.08)] to-[rgba(155,98,255,0.02)] border border-[rgba(155,98,255,0.20)] flex items-center gap-7 max-sm:flex-col max-sm:text-center max-sm:p-6 reveal">
           {/* Glow */}

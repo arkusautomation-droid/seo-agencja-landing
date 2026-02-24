@@ -188,7 +188,7 @@ export default function LlmLogosSection() {
           </svg>
           {"Widoczno\u015B\u0107 w AI"}
         </div>
-        <h2 className="section-title reveal">
+        <h2 className="section-title text-gradient-white-yellow reveal">
           {"Optymalizujemy pod platformy,"}
           <br />
           {"kt\u00F3re zmieniaj\u0105 wyszukiwanie"}

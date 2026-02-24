@@ -23,7 +23,7 @@ const cards = [
 
 export default function VsSection() {
   return (
-    <section className="relative" data-glow="red">
+    <section className="relative !pt-10 !pb-10" data-glow="red">
       <div className="container">
         <div className="section-badge mx-auto flex justify-center reveal">
           <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">

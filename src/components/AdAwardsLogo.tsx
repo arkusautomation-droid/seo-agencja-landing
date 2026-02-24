@@ -1,6 +1,6 @@
 export default function AdAwardsLogo({ className = "h-8" }: { className?: string }) {
   return (
-    <div className={`flex items-center gap-2.5 ${className}`}>
+    <div className={`flex items-center justify-center gap-2.5 ${className}`}>
       {/* Original geometric sign — two interlocking chevrons */}
       <svg
         viewBox="0 0 90 38"

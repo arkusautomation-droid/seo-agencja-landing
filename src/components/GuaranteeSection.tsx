@@ -8,7 +8,7 @@ export default function GuaranteeSection() {
           </svg>
           Gwarancje
         </div>
-        <h2 className="section-title reveal">Nasze gwarancje</h2>
+        <h2 className="section-title text-gradient-white-green reveal">Nasze gwarancje</h2>
         <p className="section-sub reveal">
           {"Dwie rzeczy, których nie oferuje żadna inna agencja naraz"}
         </p>
