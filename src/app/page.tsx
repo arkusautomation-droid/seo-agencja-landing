@@ -8,6 +8,7 @@ import PricingSection from "@/components/PricingSection";
 import CompareSection from "@/components/CompareSection";
 import RoiSection from "@/components/RoiSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
         <CompareSection />
         <RoiSection />
         <GuaranteeSection />
+        <TestimonialsSection />
       </main>
       <Footer />
     </>
