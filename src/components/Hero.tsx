@@ -32,9 +32,8 @@ export default function Hero() {
           <span className="text-gradient">{"klientów, nie raporty"}</span>
         </h1>
 
-        <p className="text-lg text-text-dim max-w-[600px] mx-auto mb-12 leading-relaxed text-center">
-          Nie sprzedajemy pozycji fraz — sprzedajemy realny wzrost ruchu,
-          {"zapytań i przychodów z Google. Mierzysz efekty, nie obietnice."}
+        <p className="text-lg text-text-dim max-w-[640px] mx-auto mb-16 leading-relaxed text-center">
+          {"Nie sprzedajemy pozycji fraz — sprzedajemy realny wzrost ruchu, zapytań i przychodów z Google. Mierzysz efekty, nie obietnice."}
         </p>
 
         {/* Stats row */}
