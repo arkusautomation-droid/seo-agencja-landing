@@ -23,7 +23,7 @@ const cards = [
 
 export default function VsSection() {
   return (
-    <section className="relative !py-6" data-glow="red">
+    <section className="relative !pt-4 !pb-4" data-glow="red">
       <div className="container">
         <div className="section-badge mx-auto flex justify-center reveal">
           <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
@@ -38,18 +38,18 @@ export default function VsSection() {
         <p className="section-sub reveal">
           {"Typowe oferty SEO mierzą pozycje. My mierzymy Twój przychód."}
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[960px] mx-auto reveal-stagger">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-[960px] mx-auto reveal-stagger">
           {cards.map((c, i) => (
             <div
               key={i}
-              className={`glass-card p-6 rounded-xl transition-all duration-300 ${
+              className={`glass-card p-7 rounded-xl transition-all duration-300 ${
                 c.type === "old"
                   ? "border-l-3 border-l-red vs-card-old"
                   : "border-l-3 border-l-green vs-card-new"
               }`}
             >
               <div
-                className={`inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[1.5px] mb-3 font-semibold px-2.5 py-1 rounded-full ${
+                className={`inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[1.5px] mb-4 font-semibold px-2.5 py-1 rounded-full ${
                   c.type === "old"
                     ? "text-red bg-red-glow vs-badge-old"
                     : "text-green bg-green-glow vs-badge-new"
@@ -66,8 +66,8 @@ export default function VsSection() {
                 )}
                 {c.type === "old" ? "Stare podej\u015Bcie" : "Podej\u015Bcie AdAwards"}
               </div>
-              <h3 className="text-base font-semibold mb-2 text-text-secondary">{c.title}</h3>
-              <p className="text-[13px] text-text-dim leading-[1.6]">
+              <h3 className="text-base font-semibold mb-3 text-text-secondary">{c.title}</h3>
+              <p className="text-[13px] text-text-dim leading-[1.7]">
                 {c.text}
               </p>
             </div>
