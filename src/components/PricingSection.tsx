@@ -22,17 +22,17 @@ const tabDefs: { id: TabId; label: string; icon: React.ReactNode }[] = [
   {
     id: "local",
     label: "SEO Lokalne",
-    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="w-4 h-4"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>,
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="w-5 h-5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>,
   },
   {
     id: "country",
-    label: "SEO Ogólnopolskie",
-    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="w-4 h-4"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>,
+    label: "SEO Og\u00F3lnopolskie",
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="w-5 h-5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>,
   },
   {
     id: "ecom",
     label: "SEO E-commerce",
-    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="w-4 h-4"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>,
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="w-5 h-5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>,
   },
 ];
 
@@ -173,34 +173,70 @@ const tabPlans: Record<TabId, Plan[]> = {
   ecom: ecomPlans,
 };
 
+/* Color scheme per tab */
+const tabColors: Record<TabId, {
+  accent: string; accentLight: string; glow: string; glowStrong: string;
+  border: string; borderRec: string; subtle: string; shadowRec: string;
+  checkColor: string; bonusBorder: string;
+}> = {
+  local: {
+    accent: "text-accent-light", accentLight: "text-accent-light",
+    glow: "rgba(155,98,255,0.12)", glowStrong: "rgba(155,98,255,0.25)",
+    border: "border-[rgba(155,98,255,0.12)]", borderRec: "border-accent",
+    subtle: "bg-[rgba(155,98,255,0.06)]", shadowRec: "shadow-[0_0_0_6px_rgba(155,98,255,0.10),0_0_40px_rgba(155,98,255,0.12)]",
+    checkColor: "text-accent-light", bonusBorder: "border-[rgba(155,98,255,0.25)]",
+  },
+  country: {
+    accent: "text-blue", accentLight: "text-blue",
+    glow: "rgba(59,130,246,0.12)", glowStrong: "rgba(59,130,246,0.25)",
+    border: "border-[rgba(59,130,246,0.12)]", borderRec: "border-blue",
+    subtle: "bg-[rgba(59,130,246,0.06)]", shadowRec: "shadow-[0_0_0_6px_rgba(59,130,246,0.10),0_0_40px_rgba(59,130,246,0.12)]",
+    checkColor: "text-blue", bonusBorder: "border-[rgba(59,130,246,0.25)]",
+  },
+  ecom: {
+    accent: "text-green", accentLight: "text-green",
+    glow: "rgba(34,197,94,0.12)", glowStrong: "rgba(34,197,94,0.25)",
+    border: "border-[rgba(34,197,94,0.12)]", borderRec: "border-green",
+    subtle: "bg-[rgba(34,197,94,0.06)]", shadowRec: "shadow-[0_0_0_6px_rgba(34,197,94,0.10),0_0_40px_rgba(34,197,94,0.12)]",
+    checkColor: "text-green", bonusBorder: "border-[rgba(34,197,94,0.25)]",
+  },
+};
+
+const recBadgeColors: Record<TabId, string> = {
+  local: "bg-gradient-to-r from-accent-dark to-accent-light shadow-[0_2px_12px_rgba(155,98,255,0.4)]",
+  country: "bg-gradient-to-r from-[#2563eb] to-[#60a5fa] shadow-[0_2px_12px_rgba(59,130,246,0.4)]",
+  ecom: "bg-gradient-to-r from-[#16a34a] to-[#4ade80] shadow-[0_2px_12px_rgba(34,197,94,0.4)]",
+};
+
 function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
+  const c = tabColors[tab];
   return (
     <div className={`relative p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 ${
       plan.recommended
-        ? "bg-bg-card border-2 border-accent shadow-[0_0_0_6px_rgba(155,98,255,0.10),0_0_40px_rgba(155,98,255,0.12)]"
+        ? `bg-bg-card border-2 ${c.borderRec} ${c.shadowRec}`
         : "glass-card"
     }`}>
       {plan.recommended && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] font-bold py-1 px-4 rounded-full tracking-[0.8px] whitespace-nowrap text-white bg-gradient-to-r from-accent-dark to-accent-light shadow-[0_2px_12px_rgba(155,98,255,0.4)]">
+        <div className={`inline-block text-[10px] font-bold py-1 px-4 rounded-full tracking-[0.8px] whitespace-nowrap text-white mb-3 ${recBadgeColors[tab]}`}>
           REKOMENDOWANY
         </div>
       )}
 
-      <div className="text-xs uppercase tracking-[1.5px] font-bold mb-1 text-accent-light">{plan.name}</div>
+      <div className={`text-xs uppercase tracking-[1.5px] font-bold mb-1 ${c.accent}`}>{plan.name}</div>
       <div className="text-[34px] font-bold mb-0.5 leading-tight">
-        {plan.price} <span className="text-sm text-text-dim font-normal">z\u0142 / mies.</span>
+        {plan.price} <span className="text-sm text-text-dim font-normal">{`z\u0142 / mies.`}</span>
       </div>
       <div className="text-xs text-text-muted mb-4 leading-snug">{plan.target}</div>
 
       {plan.kpis.map((kpi, i) => (
-        <div key={i} className={`rounded-lg p-3 px-3.5 border border-[rgba(155,98,255,0.12)] bg-accent-subtle ${i > 0 ? "mt-1.5" : ""} mb-1.5`}>
-          <div className="text-[10px] uppercase tracking-[1px] font-semibold mb-0.5 text-accent-light">{kpi.label}</div>
+        <div key={i} className={`rounded-lg p-3 px-3.5 ${c.border} border ${c.subtle} ${i > 0 ? "mt-1.5" : ""} mb-1.5`}>
+          <div className={`text-[10px] uppercase tracking-[1px] font-semibold mb-0.5 ${c.accent}`}>{kpi.label}</div>
           <div className="text-base font-bold text-text-secondary">{kpi.value}</div>
           <div className="text-[11px] text-text-dim mt-0.5">{kpi.note}</div>
         </div>
       ))}
 
-      <hr className="border-t border-[rgba(155,98,255,0.08)] my-4" />
+      <hr className="border-t border-[rgba(255,255,255,0.06)] my-4" />
 
       {plan.oneTime && (
         <>
@@ -208,7 +244,7 @@ function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
           <ul className="list-none mb-3">
             {plan.oneTime.map((item, i) => (
               <li key={i} className="text-[12.5px] py-[3px] text-text-secondary flex items-start gap-2 leading-snug">
-                <span className="font-bold shrink-0 mt-px text-[11px] text-accent-light">&#10003;</span>
+                <span className={`font-bold shrink-0 mt-px text-[11px] ${c.checkColor}`}>&#10003;</span>
                 {item}
               </li>
             ))}
@@ -222,7 +258,7 @@ function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
           <ul className="list-none mb-3">
             {plan.recurring.map((item, i) => (
               <li key={i} className="text-[12.5px] py-[3px] text-text-secondary flex items-start gap-2 leading-snug">
-                <span className="font-bold shrink-0 mt-px text-[11px] text-accent-light">&#10003;</span>
+                <span className={`font-bold shrink-0 mt-px text-[11px] ${c.checkColor}`}>&#10003;</span>
                 {item}
               </li>
             ))}
@@ -234,7 +270,7 @@ function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
         <ul className="list-none mb-3">
           {plan.items.map((item, i) => (
             <li key={i} className="text-[12.5px] py-[3px] text-text-secondary flex items-start gap-2 leading-snug">
-              <span className="font-bold shrink-0 mt-px text-[11px] text-accent-light">&#10003;</span>
+              <span className={`font-bold shrink-0 mt-px text-[11px] ${c.checkColor}`}>&#10003;</span>
               {item}
             </li>
           ))}
@@ -242,7 +278,7 @@ function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
       )}
 
       {plan.bonus && (
-        <div className="text-xs py-2 px-3 rounded-lg bg-accent-subtle border border-dashed border-[rgba(155,98,255,0.25)] text-accent-light font-medium mt-2">
+        <div className={`text-xs py-2 px-3 rounded-lg ${c.subtle} border border-dashed ${c.bonusBorder} ${c.accent} font-medium mt-2`}>
           {plan.bonus}
         </div>
       )}
@@ -268,11 +304,11 @@ export default function PricingSection() {
         </div>
         <h2 className="section-title reveal">Pakiety z konkretnymi celami wzrostu</h2>
         <p className="section-sub reveal">
-          {"Każdy pakiet = konkretny KPI, który mierzysz. Umowa bezterminowa, 1-miesięczne wypowiedzenie."}
+          {"Ka\u017Cdy pakiet = konkretny KPI, kt\u00F3ry mierzysz. Umowa bezterminowa, 1-miesi\u0119czne wypowiedzenie."}
         </p>
 
-        {/* Tabs — pill toggle */}
-        <div className="flex justify-center mb-10 reveal">
+        {/* Tabs */}
+        <div className="flex justify-center mb-16">
           <div className="pricing-tabs-container inline-flex gap-2 p-2 rounded-full bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.06)]">
             {tabDefs.map((t) => (
               <button

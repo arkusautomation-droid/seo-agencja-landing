@@ -4,6 +4,7 @@ import ContractBanner from "@/components/ContractBanner";
 import VsSection from "@/components/VsSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import LlmSection from "@/components/LlmSection";
+import LlmLogosSection from "@/components/LlmLogosSection";
 import PricingSection from "@/components/PricingSection";
 import CompareSection from "@/components/CompareSection";
 import RoiSection from "@/components/RoiSection";
@@ -30,6 +31,7 @@ export default function Home() {
         <VsSection />
         <BenefitsSection />
         <LlmSection />
+        <LlmLogosSection />
         <PricingSection />
         <CompareSection />
         <RoiSection />
