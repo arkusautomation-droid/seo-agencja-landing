@@ -31,7 +31,10 @@ export default function VsSection() {
           </svg>
           {"Porównanie"}
         </div>
-        <h2 className="section-title reveal">Dlaczego zmieniamy zasady gry</h2>
+        <h2 className="section-title reveal">
+          {"Dlaczego "}
+          <span className="text-gradient-orange">{"zmieniamy zasady gry"}</span>
+        </h2>
         <p className="section-sub reveal">
           {"Typowe oferty SEO mierzą pozycje. My mierzymy Twój przychód."}
         </p>
@@ -41,15 +44,15 @@ export default function VsSection() {
               key={i}
               className={`glass-card p-6 rounded-xl transition-all duration-300 ${
                 c.type === "old"
-                  ? "border-l-3 border-l-red"
-                  : "border-l-3 border-l-green"
+                  ? "border-l-3 border-l-red vs-card-old"
+                  : "border-l-3 border-l-green vs-card-new"
               }`}
             >
               <div
                 className={`inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[1.5px] mb-3 font-semibold px-2.5 py-1 rounded-full ${
                   c.type === "old"
-                    ? "text-red bg-red-glow"
-                    : "text-green bg-green-glow"
+                    ? "text-red bg-red-glow vs-badge-old"
+                    : "text-green bg-green-glow vs-badge-new"
                 }`}
               >
                 {c.type === "old" ? (

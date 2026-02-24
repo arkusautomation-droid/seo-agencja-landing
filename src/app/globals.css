@@ -280,6 +280,57 @@ section {
   background-clip: text;
 }
 
+/* Orange gradient — like hero text-gradient but warm */
+.text-gradient-orange {
+  background: linear-gradient(135deg, #f97316, #fbbf24, #fb923c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* VS Section — card glow effects */
+.vs-card-old {
+  position: relative;
+  overflow: hidden;
+}
+.vs-card-old::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -20%;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.10), transparent 70%);
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+.vs-card-new {
+  position: relative;
+  overflow: hidden;
+}
+.vs-card-new::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -20%;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.10), transparent 70%);
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* VS badge text glow */
+.vs-badge-old {
+  text-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+}
+.vs-badge-new {
+  text-shadow: 0 0 12px rgba(34, 197, 94, 0.4);
+}
+
 /* ═══════════════════════════════════════
    GLASS CARD + PROMPT 4 microinteractions
    ═══════════════════════════════════════ */

@@ -308,7 +308,7 @@ export default function PricingSection() {
         </p>
 
         {/* Tabs */}
-        <div className="flex justify-center mb-16">
+        <div className="flex justify-center mb-20">
           <div className="pricing-tabs-container inline-flex gap-2 p-2 rounded-full bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.06)]">
             {tabDefs.map((t) => (
               <button
