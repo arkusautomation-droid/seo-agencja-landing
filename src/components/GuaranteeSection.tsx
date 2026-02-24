@@ -1,18 +1,18 @@
 export default function GuaranteeSection() {
   return (
-    <section className="relative">
+    <section className="relative" data-glow="green-orange">
       <div className="container">
-        <div className="section-badge mx-auto flex justify-center">
+        <div className="section-badge mx-auto flex justify-center reveal">
           <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
             <path d="M8 1l1.5 3.5H14l-3 2.5 1.5 4L8 8.5 3.5 11l1.5-4L2 4.5h4.5z" fill="currentColor" />
           </svg>
           Gwarancje
         </div>
-        <h2 className="section-title">Nasze gwarancje</h2>
-        <p className="section-sub">
+        <h2 className="section-title reveal">Nasze gwarancje</h2>
+        <p className="section-sub reveal">
           {"Dwie rzeczy, których nie oferuje żadna inna agencja naraz"}
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-[900px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-[900px] mx-auto reveal-stagger">
           {/* Activity guarantee */}
           <div className="relative p-8 rounded-2xl text-center bg-gradient-to-br from-[rgba(34,197,94,0.08)] to-[rgba(34,197,94,0.01)] border border-[rgba(34,197,94,0.20)] transition-all duration-300 hover:-translate-y-1">
             <div className="absolute top-[-60px] right-[-60px] w-[150px] h-[150px] bg-[radial-gradient(circle,rgba(34,197,94,0.1),transparent_70%)] pointer-events-none" />

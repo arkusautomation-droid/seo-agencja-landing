@@ -10,10 +10,19 @@ import RoiSection from "@/components/RoiSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
     <>
+      {/* Ambient background */}
+      <div className="bg-ambient">
+        <div className="bg-ambient-orb bg-ambient-orb--1" />
+        <div className="bg-ambient-orb bg-ambient-orb--2" />
+        <div className="bg-ambient-orb bg-ambient-orb--3" />
+      </div>
+      <div className="bg-noise" />
+
       <Topbar />
       <main>
         <Hero />
@@ -28,6 +37,7 @@ export default function Home() {
         <TestimonialsSection />
       </main>
       <Footer />
+      <ScrollReveal />
     </>
   );
 }

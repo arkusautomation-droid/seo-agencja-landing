@@ -66,9 +66,9 @@ export default function TestimonialsSection() {
   const doubledTestimonials = [...testimonials, ...testimonials, ...testimonials];
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden" data-glow="purple">
       <div className="container mb-12">
-        <div className="section-badge mx-auto flex justify-center">
+        <div className="section-badge mx-auto flex justify-center reveal">
           <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
             <path
               d="M8 1.5l1.5 3 3.5.5-2.5 2.5.5 3.5L8 9.5l-3 1.5.5-3.5L3 5l3.5-.5z"
@@ -79,8 +79,8 @@ export default function TestimonialsSection() {
           </svg>
           Opinie
         </div>
-        <h2 className="section-title">{"Zaufali nam"}</h2>
-        <p className="section-sub">
+        <h2 className="section-title reveal">{"Zaufali nam"}</h2>
+        <p className="section-sub reveal">
           {"Klienci, z którymi współpracujemy od lat"}
         </p>
       </div>

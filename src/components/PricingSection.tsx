@@ -254,34 +254,34 @@ export default function PricingSection() {
   const [activeTab, setActiveTab] = useState<TabId>("local");
 
   return (
-    <section id="pakiety" className="relative">
+    <section id="pakiety" className="relative" data-glow="blue">
       {/* Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[radial-gradient(50%_50%,rgba(155,98,255,0.08)_0%,transparent_100%)] pointer-events-none" />
 
       <div className="container relative z-10">
-        <div className="section-badge mx-auto flex justify-center">
+        <div className="section-badge mx-auto flex justify-center reveal">
           <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
             <rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" strokeWidth="1.5" />
             <path d="M5 8h6M8 5v6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
           Cennik
         </div>
-        <h2 className="section-title">Pakiety z konkretnymi celami wzrostu</h2>
-        <p className="section-sub">
+        <h2 className="section-title reveal">Pakiety z konkretnymi celami wzrostu</h2>
+        <p className="section-sub reveal">
           {"Każdy pakiet = konkretny KPI, który mierzysz. Umowa bezterminowa, 1-miesięczne wypowiedzenie."}
         </p>
 
         {/* Tabs — pill toggle */}
-        <div className="flex justify-center mb-10">
-          <div className="inline-flex gap-1 p-1.5 rounded-full bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.08)]">
+        <div className="flex justify-center mb-10 reveal">
+          <div className="pricing-tabs-container inline-flex gap-2 p-2 rounded-full bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.06)]">
             {tabDefs.map((t) => (
               <button
                 key={t.id}
                 onClick={() => setActiveTab(t.id)}
-                className={`py-2.5 px-5 rounded-full text-sm font-medium cursor-pointer transition-all inline-flex items-center gap-2 ${
+                className={`pricing-tab ${
                   activeTab === t.id
-                    ? "bg-gradient-to-r from-accent-dark to-accent-light text-white shadow-[0_2px_12px_rgba(155,98,255,0.3)]"
-                    : "text-text-dim hover:text-text"
+                    ? `pricing-tab--active pricing-tab--active-${t.id}`
+                    : ""
                 }`}
               >
                 {t.icon}
@@ -292,7 +292,7 @@ export default function PricingSection() {
         </div>
 
         {/* Plans grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-start">
+        <div key={activeTab} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-start pricing-content-enter">
           {tabPlans[activeTab].map((plan, i) => (
             <PlanCard key={`${activeTab}-${i}`} plan={plan} tab={activeTab} />
           ))}

@@ -11,17 +11,17 @@ const rows = [
 
 export default function CompareSection() {
   return (
-    <section className="relative">
+    <section className="relative" data-glow="green">
       <div className="container">
-        <div className="section-badge mx-auto flex justify-center">
+        <div className="section-badge mx-auto flex justify-center reveal">
           <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
             <path d="M4 2v12M12 2v12M2 8h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
           {"Porównanie"}
         </div>
-        <h2 className="section-title">AdAwards vs typowa agencja SEO</h2>
-        <p className="section-sub">{"Konkretne różnice, które widzisz w wynikach"}</p>
-        <div className="overflow-x-auto rounded-2xl border border-border">
+        <h2 className="section-title reveal">AdAwards vs typowa agencja SEO</h2>
+        <p className="section-sub reveal">{"Konkretne różnice, które widzisz w wynikach"}</p>
+        <div className="overflow-x-auto rounded-2xl border border-border reveal">
           <table className="w-full border-collapse text-[13px] max-sm:text-[11px]">
             <thead>
               <tr className="bg-[rgba(155,98,255,0.04)]">

@@ -23,19 +23,19 @@ const cards = [
 
 export default function VsSection() {
   return (
-    <section className="relative">
+    <section className="relative" data-glow="red">
       <div className="container">
-        <div className="section-badge mx-auto flex justify-center">
+        <div className="section-badge mx-auto flex justify-center reveal">
           <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
             <path d="M8 2v12M2 8h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
           {"Porównanie"}
         </div>
-        <h2 className="section-title">Dlaczego zmieniamy zasady gry</h2>
-        <p className="section-sub">
+        <h2 className="section-title reveal">Dlaczego zmieniamy zasady gry</h2>
+        <p className="section-sub reveal">
           {"Typowe oferty SEO mierzą pozycje. My mierzymy Twój przychód."}
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[960px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[960px] mx-auto reveal-stagger">
           {cards.map((c, i) => (
             <div
               key={i}

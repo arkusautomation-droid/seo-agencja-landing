@@ -18,26 +18,26 @@ const cards = [
 
 export default function RoiSection() {
   return (
-    <section className="relative">
+    <section className="relative" data-glow="orange">
       {/* Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[radial-gradient(50%_50%,rgba(155,98,255,0.06)_0%,transparent_100%)] pointer-events-none" />
 
       <div className="container relative z-10">
-        <div className="section-badge mx-auto flex justify-center">
+        <div className="section-badge mx-auto flex justify-center reveal">
           <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
             <path d="M2 14l4-5 3 3 5-8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
           ROI
         </div>
-        <h2 className="section-title">{"Liczby, które przekonują szefa"}</h2>
-        <p className="section-sub">Dlaczego SEO to inwestycja, nie koszt</p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-[960px] mx-auto">
+        <h2 className="section-title reveal">{"Liczby, które przekonują szefa"}</h2>
+        <p className="section-sub reveal">Dlaczego SEO to inwestycja, nie koszt</p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-[960px] mx-auto reveal-stagger">
           {cards.map((c, i) => (
             <div
               key={i}
               className="glass-card p-8 text-center transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="text-[48px] font-bold text-gradient leading-none mb-2">
+              <div className="text-[48px] font-bold text-gradient-warm leading-none mb-2">
                 {c.big}
               </div>
               <div className="text-sm text-text-secondary mb-2 font-medium">{c.mid}</div>

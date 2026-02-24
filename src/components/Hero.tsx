@@ -17,7 +17,7 @@ export default function Hero() {
       {/* Secondary glow — pink accent */}
       <div className="absolute top-[100px] right-[10%] w-[400px] h-[400px] bg-[radial-gradient(50%_50%,rgba(236,72,153,0.15)_0%,transparent_100%)] pointer-events-none" />
 
-      <div className="container relative z-10">
+      <div className="container relative z-10 reveal">
         {/* Badge */}
         <div className="section-badge mx-auto mb-8">
           <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">

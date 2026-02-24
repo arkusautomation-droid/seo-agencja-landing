@@ -8,7 +8,7 @@ export default function Footer() {
 
       <div className="container relative z-10">
         {/* CTA block */}
-        <div className="max-w-[700px] mx-auto text-center mb-12 p-10 rounded-3xl bg-gradient-to-br from-[rgba(24,19,66,0.8)] to-[rgba(36,31,54,0.6)] border border-[rgba(155,98,255,0.15)] shadow-[0_3px_20px_rgba(155,98,255,0.12)]">
+        <div className="max-w-[700px] mx-auto text-center mb-12 p-10 rounded-3xl bg-gradient-to-br from-[rgba(24,19,66,0.8)] to-[rgba(36,31,54,0.6)] border border-[rgba(155,98,255,0.15)] shadow-[0_3px_20px_rgba(155,98,255,0.12)] reveal">
           <AdAwardsLogo className="h-8 mx-auto mb-5" />
           <h3 className="text-2xl sm:text-3xl font-bold mb-3 leading-tight">
             {"Gotowy na "}<span className="text-gradient">{"wzrost z SEO"}</span>{"?"}

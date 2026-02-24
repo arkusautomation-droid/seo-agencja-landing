@@ -34,22 +34,22 @@ function ListItem({ icon, title, desc, color }: { icon: React.ReactNode; title: 
 
 export default function LlmSection() {
   return (
-    <section className="relative">
+    <section className="relative" data-glow="purple">
       <div className="container">
-        <div className="section-badge mx-auto flex justify-center">
+        <div className="section-badge mx-auto flex justify-center reveal">
           <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
             <circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="1.5" />
             <path d="M8 5v3l2 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
           Technologia
         </div>
-        <h2 className="section-title">Optymalizacja pod Google i czaty AI</h2>
-        <p className="section-sub">
+        <h2 className="section-title reveal">Optymalizacja pod Google i czaty AI</h2>
+        <p className="section-sub reveal">
           {"W 2026 klienci szukają dwoma drogami \u2014 przez Google i przez AI. Optymalizujemy obie."}
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 reveal-stagger">
           {/* Google SEO */}
-          <div className="glass-card p-7">
+          <div className="glass-card llm-card-blue p-7">
             <h3 className="text-[17px] font-semibold mb-4 flex items-center gap-3">
               <span className="w-3 h-3 rounded-full bg-blue shrink-0 shadow-[0_0_10px_rgba(59,130,246,0.4)]" />
               {"Google SEO \u2014 fundament widoczności"}
@@ -62,7 +62,7 @@ export default function LlmSection() {
           </div>
 
           {/* GEO / LLM */}
-          <div className="glass-card p-7">
+          <div className="glass-card llm-card-purple p-7">
             <h3 className="text-[17px] font-semibold mb-4 flex items-center gap-3">
               <span className="w-3 h-3 rounded-full bg-accent shrink-0 shadow-[0_0_10px_rgba(155,98,255,0.4)]" />
               {"GEO \u2014 widoczność w ChatGPT, Gemini, Perplexity"}

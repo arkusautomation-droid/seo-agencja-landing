@@ -70,29 +70,29 @@ const colorMap = {
 
 export default function BenefitsSection() {
   return (
-    <section className="relative">
+    <section className="relative" data-glow="orange">
       {/* Subtle glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(50%_50%,rgba(155,98,255,0.06)_0%,transparent_100%)] pointer-events-none" />
 
       <div className="container relative z-10">
-        <div className="section-badge mx-auto flex justify-center">
+        <div className="section-badge mx-auto flex justify-center reveal">
           <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
             <path d="M8 1l2 5h5l-4 3 2 5-5-3-5 3 2-5-4-3h5z" fill="currentColor" />
           </svg>
           {"Korzyści"}
         </div>
-        <h2 className="section-title">Co konkretnie zyskujesz</h2>
-        <p className="section-sub">
+        <h2 className="section-title reveal">Co konkretnie zyskujesz</h2>
+        <p className="section-sub reveal">
           {"Nie lista czynności \u2014 lista wyników, które wpływają na Twój biznes"}
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 reveal-stagger">
           {benefits.map((b, i) => (
             <div
               key={i}
-              className="glass-card p-7 text-center transition-all duration-300 hover:-translate-y-1"
+              className="benefit-card glass-card p-7 text-center transition-all duration-300 hover:-translate-y-1"
             >
               <div
-                className={`w-14 h-14 mx-auto mb-4 rounded-xl flex items-center justify-center ${colorMap[b.color].bg} ${colorMap[b.color].text} border ${colorMap[b.color].border}`}
+                className={`benefit-ico w-14 h-14 mx-auto mb-4 rounded-xl flex items-center justify-center ${colorMap[b.color].bg} ${colorMap[b.color].text} border ${colorMap[b.color].border}`}
               >
                 {b.icon}
               </div>

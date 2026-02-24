@@ -2,12 +2,12 @@ export default function ContractBanner() {
   return (
     <section className="pt-0 pb-10">
       <div className="container">
-        <div className="max-w-[900px] mx-auto p-8 sm:p-10 rounded-2xl relative overflow-hidden bg-gradient-to-br from-[rgba(155,98,255,0.08)] to-[rgba(155,98,255,0.02)] border border-[rgba(155,98,255,0.20)] flex items-center gap-7 max-sm:flex-col max-sm:text-center max-sm:p-6">
+        <div className="contract-pulse max-w-[900px] mx-auto p-8 sm:p-10 rounded-2xl relative overflow-hidden bg-gradient-to-br from-[rgba(155,98,255,0.08)] to-[rgba(155,98,255,0.02)] border border-[rgba(155,98,255,0.20)] flex items-center gap-7 max-sm:flex-col max-sm:text-center max-sm:p-6 reveal">
           {/* Glow */}
           <div className="absolute top-[-80px] right-[-80px] w-[200px] h-[200px] bg-[radial-gradient(circle,rgba(155,98,255,0.15),transparent_70%)] pointer-events-none" />
 
           {/* Icon */}
-          <div className="shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-accent-dark to-accent-light">
+          <div className="shield-icon shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-accent-dark to-accent-light">
             <svg
               viewBox="0 0 24 24"
               fill="none"
