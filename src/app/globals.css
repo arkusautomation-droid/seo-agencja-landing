@@ -362,6 +362,15 @@ section {
   text-shadow: none;
 }
 
+/* White → purple gradient — hero-style fade for section titles */
+.text-gradient-white-purple {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 25%, #B27AFF 60%, #9B62FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+}
+
 /* White → yellow gradient — hero-style fade for section titles */
 .text-gradient-white-yellow {
   background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 25%, #fbbf24 60%, #f59e0b 100%);

@@ -300,7 +300,7 @@ export default function PricingSection() {
           Cennik
         </div>
         <h2 className={`section-title reveal ${
-          activeTab === "local" ? "text-gradient" :
+          activeTab === "local" ? "text-gradient-white-purple" :
           activeTab === "country" ? "text-gradient-white-blue" :
           "text-gradient-white-green"
         }`}>Pakiety z konkretnymi celami wzrostu</h2>
