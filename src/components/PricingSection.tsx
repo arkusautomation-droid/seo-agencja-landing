@@ -22,7 +22,7 @@ const tabDefs: { id: TabId; label: string; icon: React.ReactNode; activeClass: s
   {
     id: "local",
     label: "SEO Lokalne",
-    activeClass: "bg-orange text-bg border-orange",
+    activeClass: "bg-yellow text-bg border-yellow",
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="w-4 h-4"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>,
   },
   {
@@ -186,13 +186,13 @@ const colorSchemes: Record<TabId, {
   recBadgeBg: string;
 }> = {
   local: {
-    nameColor: "text-orange",
-    kpiBg: "bg-orange-glow",
-    kpiBorder: "border-[rgba(249,115,22,0.2)]",
-    kpiLabel: "text-orange",
-    checkColor: "text-orange",
-    recBorder: "border-orange",
-    recBadgeBg: "bg-orange",
+    nameColor: "text-yellow",
+    kpiBg: "bg-yellow-glow",
+    kpiBorder: "border-[rgba(255,232,31,0.2)]",
+    kpiLabel: "text-yellow",
+    checkColor: "text-yellow",
+    recBorder: "border-yellow",
+    recBadgeBg: "bg-yellow",
   },
   country: {
     nameColor: "text-blue",
@@ -279,7 +279,7 @@ function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
       )}
 
       {plan.bonus && (
-        <div className="text-xs py-2 px-3 rounded-md bg-[rgba(249,115,22,0.06)] border border-dashed border-[rgba(249,115,22,0.25)] text-orange font-medium mt-2">
+        <div className="text-xs py-2 px-3 rounded-md bg-[rgba(255,232,31,0.06)] border border-dashed border-[rgba(255,232,31,0.25)] text-yellow font-medium mt-2">
           {plan.bonus}
         </div>
       )}

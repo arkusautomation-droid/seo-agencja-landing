@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { DM_Sans, Playfair_Display } from "next/font/google";
+import { Poppins, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin", "latin-ext"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -15,11 +16,11 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "AdAwards — Oferta SEO 2026",
+  title: "AD Awards — Oferta SEO 2026",
   description:
     "Profesjonalne SEO, które przynosi klientów, nie raporty. Mierzalne efekty, bezterminowa umowa, 1-miesięczne wypowiedzenie.",
   openGraph: {
-    title: "AdAwards — Oferta SEO 2026",
+    title: "AD Awards — Oferta SEO 2026",
     description:
       "SEO, które przynosi klientów, nie raporty. Mierzalne efekty, bezterminowa umowa.",
     type: "website",
@@ -35,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body
-        className={`${dmSans.variable} ${playfair.variable} antialiased`}
+        className={`${poppins.variable} ${playfair.variable} antialiased`}
       >
         {children}
       </body>

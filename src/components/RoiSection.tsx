@@ -28,7 +28,7 @@ export default function RoiSection() {
               key={i}
               className="p-6 rounded-xl bg-bg-card border border-border text-center"
             >
-              <div className="font-heading text-[44px] font-bold text-orange leading-none mb-1">
+              <div className="font-heading text-[44px] font-bold text-yellow leading-none mb-1">
                 {c.big}
               </div>
               <div className="text-sm text-text-dim mb-2">{c.mid}</div>

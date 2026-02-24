@@ -1,6 +1,6 @@
 const benefits = [
   {
-    color: "orange" as const,
+    color: "yellow" as const,
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="w-[26px] h-[26px]">
         <path d="M12 20V10" /><path d="M18 20V4" /><path d="M6 20v-4" />
@@ -40,7 +40,7 @@ const benefits = [
     text: "Nie tylko content — poprawiamy szybkość, strukturę, schema markup i Core Web Vitals. Google i chatboty AI widzą Twoją stronę jako autorytet.",
   },
   {
-    color: "orange" as const,
+    color: "yellow" as const,
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="w-[26px] h-[26px]">
         <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
@@ -62,7 +62,7 @@ const benefits = [
 ];
 
 const colorMap = {
-  orange: { bg: "bg-orange-glow", text: "text-orange" },
+  yellow: { bg: "bg-yellow-glow", text: "text-yellow" },
   blue: { bg: "bg-blue-glow", text: "text-blue" },
   green: { bg: "bg-green-glow", text: "text-green" },
   purple: { bg: "bg-purple-glow", text: "text-purple" },

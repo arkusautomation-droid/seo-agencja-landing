@@ -2,12 +2,12 @@ export default function ContractBanner() {
   return (
     <section className="pt-10 pb-0 border-t-0!">
       <div className="container">
-        <div className="max-w-[860px] mx-auto p-8 sm:px-9 rounded-2xl bg-[linear-gradient(135deg,rgba(249,115,22,0.08)_0%,rgba(249,115,22,0.02)_100%)] border-2 border-orange flex items-center gap-6 relative overflow-hidden max-sm:flex-col max-sm:text-center max-sm:p-6">
+        <div className="max-w-[860px] mx-auto p-8 sm:px-9 rounded-2xl bg-[linear-gradient(135deg,rgba(255,232,31,0.08)_0%,rgba(255,232,31,0.02)_100%)] border-2 border-yellow flex items-center gap-6 relative overflow-hidden max-sm:flex-col max-sm:text-center max-sm:p-6">
           {/* Glow */}
-          <div className="absolute top-[-60px] right-[-60px] w-[180px] h-[180px] bg-[radial-gradient(circle,rgba(249,115,22,0.12),transparent_70%)] pointer-events-none" />
+          <div className="absolute top-[-60px] right-[-60px] w-[180px] h-[180px] bg-[radial-gradient(circle,rgba(255,232,31,0.12),transparent_70%)] pointer-events-none" />
 
           {/* Icon */}
-          <div className="shrink-0 w-16 h-16 rounded-2xl bg-orange flex items-center justify-center">
+          <div className="shrink-0 w-16 h-16 rounded-2xl bg-yellow flex items-center justify-center">
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -24,7 +24,7 @@ export default function ContractBanner() {
 
           <div className="relative z-10">
             <h3 className="font-heading text-[22px] font-bold mb-1.5">
-              Umowa <span className="text-orange">bezterminowa</span> z
+              Umowa <span className="text-yellow">bezterminowa</span> z
               1-miesięcznym wypowiedzeniem
             </h3>
             <p className="text-sm text-text-dim leading-relaxed">

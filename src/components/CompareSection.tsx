@@ -39,7 +39,7 @@ export default function CompareSection() {
                   <td className="p-3 px-4 max-sm:p-2 max-sm:px-1.5 border-b border-border text-text-muted">
                     {r.typical}
                   </td>
-                  <td className="p-3 px-4 max-sm:p-2 max-sm:px-1.5 border-b border-border text-orange font-medium">
+                  <td className="p-3 px-4 max-sm:p-2 max-sm:px-1.5 border-b border-border text-yellow font-medium">
                     {r.adawards}
                   </td>
                 </tr>

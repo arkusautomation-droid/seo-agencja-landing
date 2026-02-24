@@ -9,13 +9,13 @@ export default function Hero() {
   return (
     <section className="pt-[70px] pb-[50px] text-center relative overflow-hidden border-t-0!">
       {/* Glow */}
-      <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,var(--color-orange-glow)_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,var(--color-yellow-glow)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="container relative z-10">
         <h1 className="font-heading text-[clamp(32px,5vw,56px)] font-bold leading-[1.12] mb-[18px] tracking-[-1px]">
           SEO, które przynosi
           <br />
-          <em className="italic text-orange">klientów, nie raporty</em>
+          <em className="italic text-yellow">klientów, nie raporty</em>
         </h1>
         <p className="text-[17px] text-text-dim max-w-[620px] mx-auto mb-9">
           Nie sprzedajemy pozycji fraz — sprzedajemy realny wzrost ruchu,
@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="flex justify-center gap-10 flex-wrap">
           {stats.map((s) => (
             <div key={s.label} className="text-center">
-              <div className="font-heading text-4xl font-bold text-orange">
+              <div className="font-heading text-4xl font-bold text-yellow">
                 {s.num}
               </div>
               <div className="text-[13px] text-text-dim">{s.label}</div>
