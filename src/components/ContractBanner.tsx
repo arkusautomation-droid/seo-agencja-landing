@@ -1,13 +1,13 @@
 export default function ContractBanner() {
   return (
-    <section className="pt-10 pb-0 border-t-0!">
+    <section className="pt-0 pb-10">
       <div className="container">
-        <div className="max-w-[860px] mx-auto p-8 sm:px-9 rounded-2xl bg-[linear-gradient(135deg,rgba(255,232,31,0.08)_0%,rgba(255,232,31,0.02)_100%)] border-2 border-yellow flex items-center gap-6 relative overflow-hidden max-sm:flex-col max-sm:text-center max-sm:p-6">
+        <div className="max-w-[900px] mx-auto p-8 sm:p-10 rounded-2xl relative overflow-hidden bg-gradient-to-br from-[rgba(155,98,255,0.08)] to-[rgba(155,98,255,0.02)] border border-[rgba(155,98,255,0.20)] flex items-center gap-7 max-sm:flex-col max-sm:text-center max-sm:p-6">
           {/* Glow */}
-          <div className="absolute top-[-60px] right-[-60px] w-[180px] h-[180px] bg-[radial-gradient(circle,rgba(255,232,31,0.12),transparent_70%)] pointer-events-none" />
+          <div className="absolute top-[-80px] right-[-80px] w-[200px] h-[200px] bg-[radial-gradient(circle,rgba(155,98,255,0.15),transparent_70%)] pointer-events-none" />
 
           {/* Icon */}
-          <div className="shrink-0 w-16 h-16 rounded-2xl bg-yellow flex items-center justify-center">
+          <div className="shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-accent-dark to-accent-light">
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -23,19 +23,15 @@ export default function ContractBanner() {
           </div>
 
           <div className="relative z-10">
-            <h3 className="font-heading text-[22px] font-bold mb-1.5">
-              Umowa <span className="text-yellow">bezterminowa</span> z
-              1-miesięcznym wypowiedzeniem
+            <h3 className="text-xl sm:text-[22px] font-semibold mb-2">
+              {"Umowa "}<span className="text-gradient">bezterminowa</span>{" z 1-miesięcznym wypowiedzeniem"}
             </h3>
             <p className="text-sm text-text-dim leading-relaxed">
-              Nie trzymamy klientów na siłę.{" "}
-              <strong className="text-text">
-                Nie ma locka na 12 miesięcy.
+              {"Nie trzymamy klientów na siłę. "}
+              <strong className="text-text-secondary">
+                {"Nie ma locka na 12 miesięcy."}
               </strong>{" "}
-              Zostajecie, bo widzicie efekty — nie dlatego, że musicie.
-              Wypowiedzenie na koniec dowolnego miesiąca, bez kar i haczyków.
-              Nasza retencja to 94% — bo działamy tak, żebyście chcieli z nami
-              być.
+              {"Zostajecie, bo widzicie efekty — nie dlatego, że musicie. Wypowiedzenie na koniec dowolnego miesiąca, bez kar i haczyków. Nasza retencja to 94% — bo działamy tak, żebyście chcieli z nami być."}
             </p>
           </div>
         </div>

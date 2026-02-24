@@ -1,28 +1,48 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Colors — AD Awards brand */
-  --color-bg: #0a0c10;
-  --color-bg-card: #12151c;
-  --color-bg-card-alt: #161a24;
-  --color-yellow: #ffe81f;
-  --color-yellow-dim: #fcd720;
-  --color-yellow-glow: rgba(255, 232, 31, 0.10);
+  /* Colors — Kodezi-inspired dark purple */
+  --color-bg: #030116;
+  --color-bg-elevated: #0a0825;
+  --color-bg-card: #0c0a2a;
+  --color-bg-card-hover: #110e35;
+  --color-bg-glass: rgba(255, 255, 255, 0.04);
+  --color-bg-glass-strong: rgba(255, 255, 255, 0.07);
+
+  /* Accent — purple gradient system */
+  --color-accent: #9B62FF;
+  --color-accent-dark: #6037FF;
+  --color-accent-light: #B27AFF;
+  --color-accent-glow: rgba(155, 98, 255, 0.15);
+  --color-accent-glow-strong: rgba(155, 98, 255, 0.25);
+  --color-accent-subtle: rgba(155, 98, 255, 0.06);
+
+  /* Semantic colors */
   --color-green: #22c55e;
   --color-green-glow: rgba(34, 197, 94, 0.10);
   --color-blue: #3b82f6;
   --color-blue-glow: rgba(59, 130, 246, 0.10);
-  --color-purple: #a78bfa;
-  --color-purple-glow: rgba(167, 139, 250, 0.10);
-  --color-text: #e8eaed;
-  --color-text-dim: #8b92a0;
-  --color-text-muted: #5a6170;
-  --color-border: #1e2230;
   --color-red: #ef4444;
+  --color-red-glow: rgba(239, 68, 68, 0.10);
+  --color-yellow: #fbbf24;
+  --color-yellow-glow: rgba(251, 191, 36, 0.10);
+  --color-cyan: #06b6d4;
+  --color-cyan-glow: rgba(6, 182, 212, 0.10);
+  --color-pink: #ec4899;
 
-  /* Fonts — Poppins + Playfair Display */
-  --font-body: var(--font-poppins), "Poppins", Verdana, Geneva, Tahoma, sans-serif;
-  --font-heading: var(--font-playfair), "Playfair Display", serif;
+  /* Text */
+  --color-text: #ffffff;
+  --color-text-secondary: #ebe9fe;
+  --color-text-dim: #98a2b3;
+  --color-text-muted: #667085;
+
+  /* Borders */
+  --color-border: rgba(155, 98, 255, 0.10);
+  --color-border-strong: rgba(155, 98, 255, 0.20);
+
+  /* Fonts — Inter */
+  --font-body: var(--font-inter), "Inter", system-ui, sans-serif;
+  --font-heading: var(--font-inter), "Inter", system-ui, sans-serif;
 }
 
 * {
@@ -40,35 +60,148 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Grid pattern background */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(155, 98, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(155, 98, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
 /* Container */
 .container {
-  max-width: 1180px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
 /* Section base */
 section {
-  padding: 56px 0;
-  border-top: 1px solid var(--color-border);
+  padding: 80px 0;
+  position: relative;
 }
 
 /* Section titles */
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--color-accent-subtle);
+  border: 1px solid var(--color-border);
+  color: var(--color-accent-light);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
 .section-title {
-  font-family: var(--font-heading);
-  font-size: 28px;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 600;
   text-align: center;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
 }
 
 .section-sub {
   text-align: center;
   color: var(--color-text-dim);
-  font-size: 15px;
-  margin-bottom: 36px;
-  max-width: 680px;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 48px;
+  max-width: 640px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent), var(--color-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass card */
+.glass-card {
+  background: linear-gradient(135deg, rgba(155, 98, 255, 0.04), rgba(155, 98, 255, 0));
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+}
+
+.glass-card:hover {
+  border-color: var(--color-border-strong);
+  background: linear-gradient(135deg, rgba(155, 98, 255, 0.07), rgba(155, 98, 255, 0.01));
+}
+
+/* Glow effect */
+.glow-purple {
+  box-shadow: 0 0 60px 20px rgba(155, 98, 255, 0.08);
+}
+
+.glow-purple-strong {
+  box-shadow: 0 0 80px 30px rgba(155, 98, 255, 0.15);
+}
+
+/* Button styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: radial-gradient(167% 100% at 50% 24%, #6037FF 0%, #B27AFF 100%);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 3px 20px rgba(155, 98, 255, 0.3);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 3px 30px rgba(155, 98, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(155, 98, 255, 0.2);
+  border-radius: 3px;
 }
 
 /* Print styles */
@@ -76,18 +209,5 @@ section {
   body {
     background: #fff;
     color: #111;
-  }
-  .plan,
-  .vs-card,
-  .roi-card,
-  .benefit,
-  .llm-card,
-  .guarantee-card,
-  .contract-banner {
-    border: 1px solid #ddd;
-    background: #fafafa;
-  }
-  .hero::before {
-    display: none;
   }
 }
