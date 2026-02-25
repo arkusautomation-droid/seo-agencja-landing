@@ -20,50 +20,50 @@ HEADERS = {
     'authorization': f'Bearer {API_KEY}'
 }
 
-BASE_STYLE = "Dark premium tech aesthetic, background gradient from near-black to deep navy with subtle blue undertone, abstract geometric and organic shapes, glowing neon accents, particle network connections, clean modern composition, professional blog header image, no people no faces no stock photo feel, no text on image, wide cinematic format, subtle depth of field, studio-quality rendering, minimalist with strategic negative space"
+BASE_STYLE = "Dark premium background gradient from deep navy #070B14 to near-black, cinematic wide format, professional blog header image, 3D rendered glossy objects and icons floating in space, volumetric lighting with soft colored glow, shallow depth of field with bokeh, studio-quality rendering, no text no words no letters no watermark, ultra clean composition with strategic negative space"
 
-NEGATIVE_PROMPT = "text, words, letters, watermark, signature, blurry, low quality, pixelated, noisy, oversaturated, cartoon, anime, childish, clipart, stock photo, generic, busy composition, cluttered, humans, faces, hands, photographic, realistic photography"
+NEGATIVE_PROMPT = "text, words, letters, numbers, watermark, signature, blurry, low quality, pixelated, noisy, oversaturated, cartoon, anime, childish, clipart, stock photo, generic, busy composition, cluttered, humans, faces, hands, fingers, ugly, deformed, disfigured"
 
 ARTICLES = [
     {
         'filename': 'geo-ai.png',
-        'prompt': f'{BASE_STYLE}. Central glowing purple and violet orb representing AI consciousness, surrounded by flowing conversation-like data streams curving from left to right, organic bioluminescent tendrils connecting floating data nodes, subtle chat bubble shapes formed by light particles, deep space feeling with scattered pink accent sparks, ethereal and futuristic'
+        'prompt': f'{BASE_STYLE}. Glossy 3D chat bubble icon in translucent purple glass hovering center-left, beside a glowing AI brain hologram with neural network connections in violet and magenta, small floating pictogram icons around them: magnifying glass, globe, sparkle star, all in frosted glass material, purple and pink neon ambient light, futuristic AI conversation theme'
     },
     {
         'filename': 'core-web-vitals.png',
-        'prompt': f'{BASE_STYLE}. Three distinct sinusoidal wave forms flowing horizontally in green cyan and teal, representing performance metrics, subtle grid overlay like performance dashboard, pulse points where waves intersect glow brighter, minimal ECG heartbeat monitor aesthetic applied to web performance, data visualization feel, clean analytical composition'
+        'prompt': f'{BASE_STYLE}. Three 3D speedometer gauges floating at different angles, each glowing in different color: green for fast, yellow for medium, red for slow, surrounded by floating performance pictogram icons: stopwatch, loading spinner, bar chart, lightning bolt, all in glossy frosted glass material, teal and cyan ambient glow, web performance dashboard feel'
     },
     {
         'filename': 'local-vs-national.png',
-        'prompt': f'{BASE_STYLE}. Split composition: left side tight concentrated cluster of warm orange glowing nodes representing local focus, right side vast expansive network of cool blue scattered nodes representing wide reach, luminous bridge of white-gold particles connects both clusters through center, the contrast between dense and spread is the visual story'
+        'prompt': f'{BASE_STYLE}. Left side: glossy 3D map pin icon in warm orange with a small building/shop pictogram on it, surrounded by close circular ripples. Right side: glossy 3D globe icon in cool blue with scattered small pin markers across surface. Center: glowing versus symbol or bridge connecting both sides, orange to blue gradient ambient light, geographic contrast theme'
     },
     {
         'filename': 'schema-markup.png',
-        'prompt': f'{BASE_STYLE}. Elegant hierarchical tree structure made of glowing cyan lines and nodes branching downward like inverted data tree or JSON structure, subtle curly bracket shapes formed by light trails framing the composition, each node luminous sphere connected by clean geometric lines, organized grid-like precision suggesting structured data, code-meets-art aesthetic'
+        'prompt': f'{BASE_STYLE}. Floating 3D code bracket icons in glossy cyan glass, curly braces and angle brackets arranged in a structured tree-like formation, small 3D pictogram icons scattered between: star rating, price tag, calendar, checkmark badge, all connected by thin glowing cyan lines forming a schema graph, cyan and white ambient light, structured data visualization'
     },
     {
         'filename': 'koszt-seo.png',
-        'prompt': f'{BASE_STYLE}. Ascending curve made of golden and amber glowing particles rising from bottom-left to upper-right suggesting growth and ROI, scattered data points along curve pulse with warm orange light, subtle concentric rings below like investment ripples, upward momentum and value accumulation, clean financial data visualization aesthetic, premium optimistic mood'
+        'prompt': f'{BASE_STYLE}. Glossy 3D golden coin stack growing upward left to right like ascending steps, beside a rising arrow chart in amber glass, floating pictogram icons around: calculator, percentage badge, rocket, trophy cup, all in warm gold frosted glass material, golden and amber ambient volumetric light, investment growth and ROI theme, premium optimistic mood'
     },
     {
         'filename': 'eeat.png',
-        'prompt': f'{BASE_STYLE}. Four concentric orbital rings in varying shades of deep blue and indigo slowly rotating like atomic model or trust layers, center core glows brightest representing Trust, each ring represents a layer of authority, small luminous particles orbit along each ring, cosmic and institutional, majestic deep blue palette'
+        'prompt': f'{BASE_STYLE}. Four glossy 3D shield icons arranged in a diamond formation, each in different shade of deep blue and indigo glass, center shield largest and brightest representing trust, surrounding pictogram icons: graduation cap for expertise, medal for authority, handshake for trust, eye for experience, all in frosted glass, deep blue and indigo ambient glow, authority and credibility theme'
     },
     {
         'filename': 'link-building.png',
-        'prompt': f'{BASE_STYLE}. Complex network graph with several large glowing orange hub nodes connected to dozens of smaller satellite nodes, most connections healthy luminous orange lines but three connections broken fractured with red warning glow and scattered particles representing toxic links, web-like organic structure, contrast between healthy and damaged connections'
+        'prompt': f'{BASE_STYLE}. Glossy 3D chain links in orange and gold floating and interconnected forming a web-like network, some links intact and glowing healthy orange, two links cracked and glowing warning red, floating pictogram icons around: anchor, external link arrow, broken chain, checkmark, all in frosted glass material, warm orange ambient light with red danger accents, link network theme'
     },
     {
         'filename': 'ai-overview.png',
-        'prompt': f'{BASE_STYLE}. Left-to-right transformation scene: left side rigid rectangular grid shapes representing traditional search results in muted blue, morphing through dynamic transition zone in center with swirling purple and orange energy, into organic flowing AI-generated shapes on right side, metamorphosis from structured to intelligent, dynamic energy'
+        'prompt': f'{BASE_STYLE}. Left side: classic 3D search bar with magnifying glass icon in muted blue glass. Right side: futuristic AI holographic display with sparkle effects in purple and orange glass. Between them: flowing transformation particles morphing from structured to organic, floating icons: robot head, search icon, sparkle wand, document, purple and orange gradient ambient light, search evolution theme'
     },
     {
         'filename': 'audyt-seo.png',
-        'prompt': f'{BASE_STYLE}. Circular radar scanner visualization with concentric rings in orange, bright scanning beam sweeps clockwise frozen mid-rotation, checkpoints along rings glow green for passed or amber for warning, center bright focal point, diagnostic scan aesthetic, grid overlay suggests systematic analysis, technical precision meets visual elegance'
+        'prompt': f'{BASE_STYLE}. Large 3D magnifying glass icon in glossy orange glass scanning over a floating website wireframe layout, revealing checkmarks and warning triangles where it focuses, surrounding floating pictogram icons: clipboard checklist, gear settings, bar chart analytics, shield security, all in frosted orange glass, warm orange scanning beam light effect, SEO audit diagnostic theme'
     },
     {
         'filename': 'google-moja-firma.png',
-        'prompt': f'{BASE_STYLE}. Central location pin abstraction made of green and blue light radiating concentric ripple waves outward like sonar or signal broadcast, ripples fade as they expand suggesting local reach, subtle map-grid pattern in deep background, small glowing nodes at edges of ripples represent local customers being reached, warm inviting despite tech aesthetic'
+        'prompt': f'{BASE_STYLE}. Central glossy 3D map location pin icon in green and teal glass, hovering above a subtle 3D city/storefront miniature scene, concentric ripple rings emanating outward from pin in green light, floating pictogram icons around: star rating, phone, clock hours, camera photo, all in frosted green glass material, green and teal ambient glow, local business visibility theme'
     },
 ]
 
