@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ALL_PACKAGES } from "@/data/packages";
 
 type TabId = "local" | "country" | "ecom";
 
@@ -43,7 +44,7 @@ const localPlans: Plan[] = [
     target: "Ma\u0142e firmy, 1 lokalizacja, niska konkurencja",
     kpis: [
       { label: "Cel po 6 miesi\u0105cach", value: "100\u20131 000 wej\u015B\u0107 / mies.", note: "z wyszukiwarki Google (ruch organiczny)" },
-      { label: "Drugi KPI", value: "Klikni\u0119cia: telefon + formularz", note: "mierzone w GA4 \u2014 cel: wzrost o 50%" },
+      { label: "Drugi KPI", value: "Zapytania na m-c", note: "mierzone w GA4 \u2014 cel: wzrost o 50%" },
     ],
     oneTimeLabel: "Jednorazowe (1. miesi\u0105c)",
     oneTime: ["Audyt strony", "Optymalizacja i porz\u0105dek on-site", "Integracja GA4 + Search Console", "Przeredagowanie tre\u015Bci", "Dob\u00F3r 5 fraz priorytetowych"],
@@ -57,7 +58,7 @@ const localPlans: Plan[] = [
     recommended: true,
     kpis: [
       { label: "Cel po 6 miesi\u0105cach", value: "150\u20131 000 wej\u015B\u0107 / mies.", note: "z wyszukiwarki Google (ruch organiczny)" },
-      { label: "Drugi KPI", value: "Klikni\u0119cia: telefon + formularz", note: "mierzone w GA4 \u2014 cel: wzrost o 80%" },
+      { label: "Drugi KPI", value: "Zapytania na m-c", note: "mierzone w GA4 \u2014 cel: wzrost o 80%" },
     ],
     oneTimeLabel: "Jednorazowe (1. miesi\u0105c)",
     oneTime: ["Wszystko z Local Start +", "Dodanie do 5 katalog\u00F3w NAP", "Optymalizacja wizyt\u00F3wki Google", "Dob\u00F3r 7 fraz priorytetowych"],
@@ -71,7 +72,7 @@ const localPlans: Plan[] = [
     target: "Firmy z konkurencj\u0105, kilka us\u0142ug",
     kpis: [
       { label: "Cel po 6 miesi\u0105cach", value: "200\u20131 500 wej\u015B\u0107 / mies.", note: "z wyszukiwarki Google (ruch organiczny)" },
-      { label: "Drugi KPI", value: "Klikni\u0119cia: telefon + formularz", note: "mierzone w GA4 \u2014 cel: wzrost o 120%" },
+      { label: "Drugi KPI", value: "Zapytania na m-c", note: "mierzone w GA4 \u2014 cel: wzrost o 120%" },
     ],
     oneTimeLabel: "Jednorazowe (1. miesi\u0105c)",
     oneTime: ["Wszystko z Local Standard +", "8 katalog\u00F3w NAP", "Analiza lokalnej konkurencji", "Dob\u00F3r 10 fraz priorytetowych"],
@@ -85,7 +86,7 @@ const localPlans: Plan[] = [
     target: "Dominacja lokalna, wiele us\u0142ug",
     kpis: [
       { label: "Cel po 6 miesi\u0105cach", value: "300\u20132 000 wej\u015B\u0107 / mies.", note: "z wyszukiwarki Google (ruch organiczny)" },
-      { label: "Drugi KPI", value: "Klikni\u0119cia: telefon + formularz", note: "mierzone w GA4 \u2014 cel: wzrost o 200%" },
+      { label: "Drugi KPI", value: "Zapytania na m-c", note: "mierzone w GA4 \u2014 cel: wzrost o 200%" },
     ],
     oneTimeLabel: "Jednorazowe (1. miesi\u0105c)",
     oneTime: ["Wszystko z Local Pro +", "10 katalog\u00F3w NAP", "Testy A/B", "Dob\u00F3r 15 fraz priorytetowych"],
@@ -208,42 +209,70 @@ const recBadgeColors: Record<TabId, string> = {
   ecom: "bg-gradient-to-r from-[#16a34a] to-[#4ade80] shadow-[0_2px_12px_rgba(34,197,94,0.4)]",
 };
 
+/* Map plan names to package IDs from packages.ts */
+const planToPackageId: Record<string, string> = {
+  "Local Start": "local-start",
+  "Local Standard": "local-standard",
+  "Local Pro": "local-pro",
+  "Local Leader": "local-leader",
+  "Country Start": "country-start",
+  "Country Standard": "country-standard",
+  "Country Pro": "country-pro",
+  "Country Leader": "country-leader",
+  "E-commerce Basic": "ecom-basic",
+  "E-commerce Pro": "ecom-pro",
+  "E-commerce Advanced": "ecom-advanced",
+  "E-commerce Leader": "ecom-leader",
+};
+
+/* Button accent colors per tab */
+const btnColors: Record<TabId, { bg: string; hover: string; shadow: string }> = {
+  local: { bg: "bg-accent", hover: "hover:bg-accent-light", shadow: "shadow-[0_4px_20px_rgba(155,98,255,0.35)]" },
+  country: { bg: "bg-blue", hover: "hover:bg-[#60a5fa]", shadow: "shadow-[0_4px_20px_rgba(59,130,246,0.35)]" },
+  ecom: { bg: "bg-green", hover: "hover:bg-[#4ade80]", shadow: "shadow-[0_4px_20px_rgba(34,197,94,0.35)]" },
+};
+
 function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
   const c = tabColors[tab];
+  const btn = btnColors[tab];
+  const pkgId = planToPackageId[plan.name];
+  const pkg = pkgId ? ALL_PACKAGES.find((p) => p.id === pkgId) : undefined;
+  const stripeLink = pkg?.stripeLink;
+
   return (
-    <div className={`relative p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 ${
+    <div className={`relative rounded-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col ${
       plan.recommended
         ? `bg-bg-card border-2 ${c.borderRec} ${c.shadowRec}`
         : "glass-card"
-    }`}>
+    }`} style={{ padding: "32px 24px" }}>
       {plan.recommended && (
-        <div className={`inline-block text-[10px] font-bold py-1 px-4 rounded-full tracking-[0.8px] whitespace-nowrap text-white mb-4 ${recBadgeColors[tab]}`}>
+        <div className={`inline-block text-[10px] font-bold py-1 px-4 rounded-full tracking-[0.8px] whitespace-nowrap text-white ${recBadgeColors[tab]}`} style={{ marginBottom: 8 }}>
           REKOMENDOWANY
         </div>
       )}
 
-      <div className={`text-xs uppercase tracking-[1.5px] font-bold mb-2 ${c.accent}`}>{plan.name}</div>
-      <div className="text-[34px] font-bold mb-1.5 leading-tight">
-        {plan.price} <span className="text-sm text-text-dim font-normal">{`z\u0142 / mies.`}</span>
+      <div className={`text-xs uppercase tracking-[1.5px] font-bold ${c.accent}`} style={{ marginBottom: 8 }}>{plan.name}</div>
+      <div className="font-bold leading-tight" style={{ fontSize: 32, marginBottom: 4 }}>
+        {plan.price} <span className="text-text-dim font-normal" style={{ fontSize: 14 }}>{`z\u0142 / mies.`}</span>
       </div>
-      <div className="text-xs text-text-muted mb-6 leading-snug">{plan.target}</div>
+      <div className="text-text-muted" style={{ fontSize: 12, marginBottom: 20, lineHeight: 1.5 }}>{plan.target}</div>
 
       {plan.kpis.map((kpi, i) => (
-        <div key={i} className={`rounded-lg p-3 px-3.5 ${c.border} border ${c.subtle} ${i > 0 ? "mt-1.5" : ""} mb-1.5`}>
-          <div className={`text-[10px] uppercase tracking-[1px] font-semibold mb-0.5 ${c.accent}`}>{kpi.label}</div>
-          <div className="text-base font-bold text-text-secondary">{kpi.value}</div>
-          <div className="text-[11px] text-text-dim mt-0.5">{kpi.note}</div>
+        <div key={i} className={`${c.border} border ${c.subtle}`} style={{ padding: "16px 18px", marginBottom: 10, marginTop: i > 0 ? 4 : 0, borderRadius: 10 }}>
+          <div className={`text-[10px] uppercase tracking-[1px] font-semibold ${c.accent}`} style={{ marginBottom: 4 }}>{kpi.label}</div>
+          <div className="font-bold text-text-secondary" style={{ fontSize: 17, marginBottom: 2 }}>{kpi.value}</div>
+          <div className="text-[11px] text-text-dim" style={{ marginTop: 4 }}>{kpi.note}</div>
         </div>
       ))}
 
-      <hr className="border-t border-[rgba(255,255,255,0.06)] my-6" />
+      <hr className="border-t border-[rgba(255,255,255,0.06)]" style={{ margin: "20px 0" }} />
 
       {plan.oneTime && (
         <>
-          <div className="text-[10px] uppercase tracking-[1.2px] text-text-muted font-semibold mb-2.5">{plan.oneTimeLabel}</div>
-          <ul className="list-none mb-4">
+          <div className="text-[10px] uppercase tracking-[1.2px] text-text-muted font-semibold" style={{ marginBottom: 12, marginTop: 4 }}>{plan.oneTimeLabel}</div>
+          <ul className="list-none" style={{ marginBottom: 16 }}>
             {plan.oneTime.map((item, i) => (
-              <li key={i} className="text-[12.5px] py-[5px] text-text-secondary flex items-start gap-2.5 leading-snug">
+              <li key={i} className="text-text-secondary flex items-start gap-2.5" style={{ padding: "5px 0", fontSize: 13, lineHeight: 1.5, gap: 8 }}>
                 <span className={`font-bold shrink-0 mt-px text-[11px] ${c.checkColor}`}>&#10003;</span>
                 {item}
               </li>
@@ -254,10 +283,10 @@ function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
 
       {plan.recurring && (
         <>
-          <div className="text-[10px] uppercase tracking-[1.2px] text-text-muted font-semibold mb-2.5">{plan.recurringLabel}</div>
-          <ul className="list-none mb-4">
+          <div className="text-[10px] uppercase tracking-[1.2px] text-text-muted font-semibold" style={{ marginBottom: 12, marginTop: 4 }}>{plan.recurringLabel}</div>
+          <ul className="list-none" style={{ marginBottom: 16 }}>
             {plan.recurring.map((item, i) => (
-              <li key={i} className="text-[12.5px] py-[5px] text-text-secondary flex items-start gap-2.5 leading-snug">
+              <li key={i} className="text-text-secondary flex items-start gap-2.5" style={{ padding: "5px 0", fontSize: 13, lineHeight: 1.5, gap: 8 }}>
                 <span className={`font-bold shrink-0 mt-px text-[11px] ${c.checkColor}`}>&#10003;</span>
                 {item}
               </li>
@@ -267,9 +296,9 @@ function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
       )}
 
       {plan.items && (
-        <ul className="list-none mb-4">
+        <ul className="list-none" style={{ marginBottom: 16 }}>
           {plan.items.map((item, i) => (
-            <li key={i} className="text-[12.5px] py-[5px] text-text-secondary flex items-start gap-2.5 leading-snug">
+            <li key={i} className="text-text-secondary flex items-start gap-2.5" style={{ padding: "5px 0", fontSize: 13, lineHeight: 1.5, gap: 8 }}>
               <span className={`font-bold shrink-0 mt-px text-[11px] ${c.checkColor}`}>&#10003;</span>
               {item}
             </li>
@@ -278,10 +307,26 @@ function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
       )}
 
       {plan.bonus && (
-        <div className={`text-xs py-2 px-3 rounded-lg ${c.subtle} border border-dashed ${c.bonusBorder} ${c.accent} font-medium mt-2`}>
+        <div className={`text-xs rounded-lg ${c.subtle} border border-dashed ${c.bonusBorder} ${c.accent} font-medium`} style={{ marginTop: 12, padding: "10px 14px", fontSize: 12 }}>
           {plan.bonus}
         </div>
       )}
+
+      {/* Order button */}
+      <div style={{ marginTop: "auto", paddingTop: 20 }}>
+        <a
+          href={stripeLink || "#kontakt"}
+          target={stripeLink ? "_blank" : undefined}
+          rel={stripeLink ? "noopener noreferrer" : undefined}
+          className={`block w-full text-center font-semibold text-white rounded-xl transition-all duration-200 ${btn.bg} ${btn.hover} ${plan.recommended ? btn.shadow : ""}`}
+          style={{ padding: "14px 20px", fontSize: 14, textDecoration: "none" }}
+        >
+          {stripeLink ? "Zamów teraz →" : "Zapytaj o pakiet →"}
+        </a>
+        <div className="text-text-muted text-center" style={{ fontSize: 10, marginTop: 8 }}>
+          Ceny netto w PLN · Bezterminowa umowa
+        </div>
+      </div>
     </div>
   );
 }
@@ -333,7 +378,7 @@ export default function PricingSection() {
         </div>
 
         {/* Plans grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-start" style={{ gap: 20 }}>
           {tabPlans[activeTab].map((plan, i) => (
             <PlanCard key={`${activeTab}-${i}`} plan={plan} tab={activeTab} />
           ))}

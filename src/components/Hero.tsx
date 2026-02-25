@@ -7,50 +7,56 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="pt-36 pb-10 text-center relative overflow-hidden border-t-0!">
+    <section style={{ paddingTop: 64, paddingBottom: 40, position: "relative", overflow: "hidden", textAlign: "center" }}>
       {/* Grid pattern */}
-      <div className="absolute inset-0 bg-grid opacity-60" />
+      <div className="bg-grid" style={{ position: "absolute", inset: 0, opacity: 0.6, zIndex: 0 }} />
 
-      {/* Purple glow — hero */}
-      <div className="absolute top-[-300px] left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-[radial-gradient(50%_50%,#321F74_0%,#01041A_100%)] pointer-events-none opacity-70" />
+      {/* Purple glow — hero (hidden) */}
+      {/* Secondary glow — pink accent (hidden) */}
 
-      {/* Secondary glow — pink accent */}
-      <div className="absolute top-[100px] right-[10%] w-[400px] h-[400px] bg-[radial-gradient(50%_50%,rgba(236,72,153,0.15)_0%,transparent_100%)] pointer-events-none" />
-
-      <div className="container relative z-10 text-center reveal">
+      <div className="container reveal" style={{ position: "relative", zIndex: 10, textAlign: "center" }}>
         {/* Badge */}
-        <div className="section-badge mx-auto mb-8">
-          <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
+        <div className="section-badge" style={{ display: "inline-flex", alignItems: "center", gap: 8, marginLeft: "auto", marginRight: "auto", marginBottom: 32 }}>
+          <svg viewBox="0 0 16 16" fill="none" style={{ width: 16, height: 16 }}>
             <path d="M8 1l2 5h5l-4 3 2 5-5-3-5 3 2-5-4-3h5z" fill="currentColor" />
           </svg>
           Oferta SEO + GEO 2026
         </div>
 
-        <h1 className="text-[clamp(36px,5.5vw,64px)] font-bold leading-[1.1] mb-6 tracking-[-0.03em]">
+        <h1 style={{ fontSize: "clamp(36px, 5.5vw, 64px)", fontWeight: 700, lineHeight: 1.1, letterSpacing: "-0.03em", marginBottom: 20 }}>
           {"SEO, które przynosi"}
           <br />
           <span className="text-gradient">{"klientów, nie raporty"}</span>
         </h1>
 
-        <p className="text-lg text-text-dim mb-16 leading-relaxed text-center" style={{ maxWidth: 640, marginLeft: "auto", marginRight: "auto" }}>
+        <p style={{ fontSize: 18, color: "var(--color-text-dim)", lineHeight: 1.6, maxWidth: 640, marginLeft: "auto", marginRight: "auto", marginBottom: 32 }}>
           {"Nie sprzedajemy pozycji fraz — sprzedajemy realny wzrost ruchu, zapytań i przychodów z Google. Mierzysz efekty, nie obietnice."}
         </p>
 
         {/* Stats row */}
-        <div className="flex justify-center gap-6 sm:gap-12 flex-wrap">
+        <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" as const, gap: 32 }}>
           {stats.map((s) => (
-            <div key={s.label} className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-gradient leading-none mb-1">
+            <div key={s.label} style={{ textAlign: "center" }}>
+              <div className="text-gradient" style={{ fontSize: 32, fontWeight: 700, lineHeight: 1, marginBottom: 2 }}>
                 {s.num}
               </div>
-              <div className="text-[12px] sm:text-[13px] text-text-muted">{s.label}</div>
+              <div style={{ fontSize: 13, color: "var(--color-text-muted)" }}>{s.label}</div>
             </div>
           ))}
         </div>
       </div>
 
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#030116] to-transparent pointer-events-none" />
+      <div style={{
+        position: "absolute",
+        bottom: 0,
+        left: 0,
+        right: 0,
+        height: 128,
+        background: "linear-gradient(to top, #030116, transparent)",
+        pointerEvents: "none",
+        zIndex: 1,
+      }} />
     </section>
   );
 }

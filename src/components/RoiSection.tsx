@@ -18,10 +18,7 @@ const cards = [
 
 export default function RoiSection() {
   return (
-    <section className="relative" data-glow="orange" style={{ paddingTop: 10 }}>
-      {/* Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[radial-gradient(50%_50%,rgba(155,98,255,0.06)_0%,transparent_100%)] pointer-events-none" />
-
+    <section className="relative" data-glow="orange">
       <div className="container relative z-10">
         <div className="section-badge mx-auto flex justify-center reveal">
           <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
@@ -29,19 +26,20 @@ export default function RoiSection() {
           </svg>
           ROI
         </div>
-        <h2 className="section-title reveal">{"Liczby, które przekonują szefa"}</h2>
-        <p className="section-sub reveal">Dlaczego SEO to inwestycja, nie koszt</p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-[960px] mx-auto reveal-stagger">
+        <h2 className="section-title text-gradient-white-yellow reveal">{"Liczby, które przekonują szefa"}</h2>
+        <p className="section-sub reveal" style={{ fontSize: 32, fontWeight: 700 }}>Dlaczego SEO to inwestycja, nie koszt</p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 reveal-stagger" style={{ gap: 20, maxWidth: 960, marginLeft: "auto", marginRight: "auto" }}>
           {cards.map((c, i) => (
             <div
               key={i}
-              className="glass-card p-8 text-center transition-all duration-300 hover:-translate-y-1"
+              className="glass-card text-center transition-all duration-300 hover:-translate-y-1"
+              style={{ padding: "28px 24px" }}
             >
-              <div className="text-[48px] font-bold text-gradient-warm leading-none mb-2">
+              <div className="font-bold text-gradient-warm leading-none" style={{ fontSize: 40, marginBottom: 6 }}>
                 {c.big}
               </div>
-              <div className="text-sm text-text-secondary mb-2 font-medium">{c.mid}</div>
-              <div className="text-xs text-text-muted leading-[1.6]">
+              <div className="text-text-secondary font-medium" style={{ fontSize: 14, marginBottom: 10 }}>{c.mid}</div>
+              <div className="text-text-muted" style={{ fontSize: 13, lineHeight: 1.6 }}>
                 {c.desc}
               </div>
             </div>

@@ -1,0 +1,16 @@
+# API directory — ensure PHP execution
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Allow direct access to PHP files
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^(.+\.php)$ $1 [L]
+</IfModule>
+
+# Deny directory listing
+Options -Indexes
+
+# Deny access to data directory (SQLite db)
+<IfModule mod_rewrite.c>
+    RewriteRule ^\.\.\/data\/ - [F,L]
+</IfModule>

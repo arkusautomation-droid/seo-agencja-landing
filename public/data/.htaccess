@@ -1,0 +1,6 @@
+# Deny all access to the data directory (SQLite database)
+Deny from all
+
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>

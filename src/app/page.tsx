@@ -12,16 +12,13 @@ import GuaranteeSection from "@/components/GuaranteeSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import NetworkBackground from "@/components/NetworkBackground";
 
 export default function Home() {
   return (
     <>
-      {/* Ambient background */}
-      <div className="bg-ambient">
-        <div className="bg-ambient-orb bg-ambient-orb--1" />
-        <div className="bg-ambient-orb bg-ambient-orb--2" />
-        <div className="bg-ambient-orb bg-ambient-orb--3" />
-      </div>
+      {/* Neural network background */}
+      <NetworkBackground />
       <div className="bg-noise" />
 
       <Topbar />

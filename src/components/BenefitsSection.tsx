@@ -82,19 +82,21 @@ export default function BenefitsSection() {
         <p className="section-sub reveal">
           {"Nie lista czynności \u2014 lista wyników, które wpływają na Twój biznes"}
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 reveal-stagger">
+        <div className="grid grid-cols-1 md:grid-cols-3 reveal-stagger" style={{ gap: 20 }}>
           {benefits.map((b, i) => (
             <div
               key={i}
-              className="benefit-card glass-card p-7 text-center transition-all duration-300 hover:-translate-y-1"
+              className="benefit-card glass-card text-center transition-all duration-300 hover:-translate-y-1"
+              style={{ padding: "28px 24px" }}
             >
               <div
-                className={`benefit-ico w-14 h-14 mx-auto mb-4 rounded-xl flex items-center justify-center ${colorMap[b.color].bg} ${colorMap[b.color].text} border ${colorMap[b.color].border}`}
+                className={`benefit-ico rounded-xl flex items-center justify-center ${colorMap[b.color].bg} ${colorMap[b.color].text} border ${colorMap[b.color].border}`}
+                style={{ width: 56, height: 56, marginLeft: "auto", marginRight: "auto", marginBottom: 16 }}
               >
                 {b.icon}
               </div>
-              <h3 className="text-[15px] font-semibold mb-2 text-text-secondary">{b.title}</h3>
-              <p className="text-[13px] text-text-dim leading-[1.6]">{b.text}</p>
+              <h3 className="font-semibold text-text-secondary" style={{ fontSize: 15, marginBottom: 8 }}>{b.title}</h3>
+              <p className="text-text-dim" style={{ fontSize: 13, lineHeight: 1.6 }}>{b.text}</p>
             </div>
           ))}
         </div>

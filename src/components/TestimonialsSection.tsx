@@ -28,31 +28,31 @@ function TestimonialCard({
   t: (typeof testimonials)[number];
 }) {
   return (
-    <div className="shrink-0 w-[380px] max-sm:w-[300px] p-6 rounded-2xl glass-card">
+    <div className="glass-card" style={{ flexShrink: 0, width: 380, padding: "32px 28px", borderRadius: 16 }}>
       {/* Quote icon */}
       <svg
         viewBox="0 0 24 24"
         fill="currentColor"
-        className="w-6 h-6 text-accent mb-4 opacity-40"
+        style={{ width: 24, height: 24, color: "var(--color-accent)", marginBottom: 16, opacity: 0.4 }}
       >
         <path d="M11 7.5a5.5 5.5 0 0 0-5.5 5.5c0 .28.02.55.07.82A3.5 3.5 0 0 0 2 17.5 3.5 3.5 0 0 0 5.5 21c1.93 0 3.5-1.57 3.5-3.5V13a5.5 5.5 0 0 0-5.5-5.5H3v1h.5zm10 0a5.5 5.5 0 0 0-5.5 5.5c0 .28.02.55.07.82A3.5 3.5 0 0 0 12 17.5a3.5 3.5 0 0 0 3.5 3.5c1.93 0 3.5-1.57 3.5-3.5V13a5.5 5.5 0 0 0-5.5-5.5H13v1h.5z" />
       </svg>
-      <p className="text-[13.5px] text-text-dim leading-[1.7] mb-5 italic">
+      <p style={{ fontSize: 15, lineHeight: 1.8, marginBottom: 24, color: "var(--color-text-dim)", fontStyle: "italic" }}>
         {"\u201E"}{t.quote}{"\u201D"}
       </p>
-      <div className="flex items-center gap-3">
+      <div style={{ display: "flex", alignItems: "center", marginTop: 20, gap: 14 }}>
         {/* Avatar placeholder */}
-        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent-dark to-accent-light flex items-center justify-center text-white font-bold text-sm shrink-0">
+        <div style={{ width: 40, height: 40, borderRadius: "50%", background: "linear-gradient(to bottom right, var(--color-accent-dark), var(--color-accent-light))", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: 14, flexShrink: 0 }}>
           {t.name
             .split(" ")
             .map((w) => w[0])
             .join("")}
         </div>
         <div>
-          <div className="text-sm font-semibold text-text-secondary">
+          <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 4, color: "var(--color-text-secondary)" }}>
             {t.name}
           </div>
-          <div className="text-[12px] text-text-muted">
+          <div style={{ fontSize: 13, lineHeight: 1.5, marginTop: 4, color: "var(--color-text-muted)" }}>
             {t.role} &middot; {t.company}
           </div>
         </div>
@@ -66,7 +66,7 @@ export default function TestimonialsSection() {
   const doubledTestimonials = [...testimonials, ...testimonials, ...testimonials];
 
   return (
-    <section className="relative overflow-hidden" data-glow="purple">
+    <section data-glow="purple" style={{ position: "relative", overflow: "hidden", padding: "48px 0" }}>
       <div className="container mb-12">
         <div className="section-badge mx-auto flex justify-center reveal">
           <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
@@ -86,12 +86,12 @@ export default function TestimonialsSection() {
       </div>
 
       {/* Marquee scroll */}
-      <div className="relative">
+      <div style={{ position: "relative" }}>
         {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#030116] to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#030116] to-transparent z-10 pointer-events-none" />
+        <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 96, background: "linear-gradient(to right, #030116, transparent)", zIndex: 10, pointerEvents: "none" }} />
+        <div style={{ position: "absolute", right: 0, top: 0, bottom: 0, width: 96, background: "linear-gradient(to left, #030116, transparent)", zIndex: 10, pointerEvents: "none" }} />
 
-        <div className="flex gap-5 animate-marquee">
+        <div className="animate-marquee" style={{ display: "flex", gap: 24 }}>
           {doubledTestimonials.map((t, i) => (
             <TestimonialCard key={i} t={t} />
           ))}

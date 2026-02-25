@@ -1,6 +1,6 @@
 const rows = [
   { aspect: "Co mierzysz", typical: "Pozycje fraz kluczowych", adawards: "Wej\u015Bcia \u2192 leady \u2192 przych\u00F3d" },
-  { aspect: "Raport", typical: "\u201EWidoczno\u015B\u0107 wzros\u0142a o 517%\u201D", adawards: "\u201E47 lead\u00F3w z Google, warto\u015B\u0107 ~23 000 z\u0142\u201D" },
+  { aspect: "Raport", typical: "\u201EWidoczno\u015B\u0107 wzros\u0142a o 517%\u201D", adawards: "Liczba telefon\u00F3w, lead\u00F3w, sprzeda\u017Cy" },
   { aspect: "Frazy", typical: "\u201EBez limitu\u201D (g\u0142\u00F3wnie zero-traffic)", adawards: "Priorytet: frazy z intencj\u0105 zakupow\u0105" },
   { aspect: "AI / GEO", typical: "Osobna us\u0142uga lub brak", adawards: "W pakiecie od Local Leader / Country Standard" },
   { aspect: "Technologia", typical: "Optymalizacja on-page", adawards: "Core Web Vitals + schema + GEO + LLM readiness" },
@@ -11,7 +11,7 @@ const rows = [
 
 export default function CompareSection() {
   return (
-    <section className="relative" data-glow="green" style={{ paddingBottom: 0 }}>
+    <section className="relative" data-glow="green">
       <div className="container">
         <div className="section-badge mx-auto flex justify-center reveal">
           <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
@@ -19,33 +19,33 @@ export default function CompareSection() {
           </svg>
           {"Porównanie"}
         </div>
-        <h2 className="section-title reveal">AdAwards vs typowa agencja SEO</h2>
+        <h2 className="section-title reveal"><span className="text-gradient">AdAwards</span>{" vs typowa agencja SEO"}</h2>
         <p className="section-sub reveal">{"Konkretne różnice, które widzisz w wynikach"}</p>
         <div className="overflow-x-auto rounded-2xl border border-border reveal" style={{ maxWidth: 960, marginLeft: "auto", marginRight: "auto" }}>
-          <table className="w-full border-collapse text-[13px] max-sm:text-[11px]">
+          <table className="w-full max-sm:text-[11px]" style={{ borderSpacing: 0, borderCollapse: "collapse" }}>
             <thead>
               <tr className="bg-[rgba(155,98,255,0.04)]">
-                <th className="p-4 px-5 max-sm:p-2.5 max-sm:px-2 text-left text-text-muted text-[11px] uppercase tracking-[1px] font-semibold">
+                <th className="text-left text-text-muted uppercase tracking-[1px] font-semibold" style={{ padding: "16px 20px", fontSize: 12 }}>
                   Aspekt
                 </th>
-                <th className="p-4 px-5 max-sm:p-2.5 max-sm:px-2 text-left text-text-muted text-[11px] uppercase tracking-[1px] font-semibold">
+                <th className="text-left text-text-muted uppercase tracking-[1px] font-semibold" style={{ padding: "16px 20px", fontSize: 12 }}>
                   Typowa agencja
                 </th>
-                <th className="p-4 px-5 max-sm:p-2.5 max-sm:px-2 text-left text-text-muted text-[11px] uppercase tracking-[1px] font-semibold">
+                <th className="text-left text-text-muted uppercase tracking-[1px] font-semibold" style={{ padding: "16px 20px", fontSize: 12 }}>
                   <span className="text-gradient font-bold">AdAwards</span>
                 </th>
               </tr>
             </thead>
             <tbody>
               {rows.map((r, i) => (
-                <tr key={i} className="border-t border-[rgba(155,98,255,0.06)] hover:bg-[rgba(155,98,255,0.03)] transition-colors">
-                  <td className="p-4 px-5 max-sm:p-2.5 max-sm:px-2">
-                    <strong className="text-text-secondary">{r.aspect}</strong>
+                <tr key={i} className="hover:bg-[rgba(255,255,255,0.02)] transition-colors" style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+                  <td style={{ padding: "16px 20px", fontSize: 14, lineHeight: 1.6 }}>
+                    <strong className="text-text-secondary" style={{ fontSize: 14, fontWeight: 600 }}>{r.aspect}</strong>
                   </td>
-                  <td className="p-4 px-5 max-sm:p-2.5 max-sm:px-2 text-text-muted">
+                  <td className="text-text-muted" style={{ padding: "16px 20px", fontSize: 14, lineHeight: 1.6 }}>
                     {r.typical}
                   </td>
-                  <td className="p-4 px-5 max-sm:p-2.5 max-sm:px-2 text-accent-light font-medium">
+                  <td className="text-accent-light font-medium" style={{ padding: "16px 20px", fontSize: 14, lineHeight: 1.6 }}>
                     {r.adawards}
                   </td>
                 </tr>

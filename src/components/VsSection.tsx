@@ -38,7 +38,7 @@ export default function VsSection() {
         <p className="section-sub reveal">
           {"Typowe oferty SEO mierzą pozycje. My mierzymy Twój przychód."}
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 reveal-stagger" style={{ gap: 25, maxWidth: 960, marginLeft: "auto", marginRight: "auto" }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 reveal-stagger" style={{ gap: 16, maxWidth: 960, marginLeft: "auto", marginRight: "auto" }}>
           {cards.map((c, i) => (
             <div
               key={i}
@@ -47,7 +47,7 @@ export default function VsSection() {
                   ? "border-l-3 border-l-red vs-card-old"
                   : "border-l-3 border-l-green vs-card-new"
               }`}
-              style={{ padding: 33 }}
+              style={{ padding: 24 }}
             >
               <div
                 className={`inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[1.5px] mb-4 font-semibold px-2.5 py-1 rounded-full ${
@@ -67,8 +67,8 @@ export default function VsSection() {
                 )}
                 {c.type === "old" ? "Stare podej\u015Bcie" : "Podej\u015Bcie AdAwards"}
               </div>
-              <h3 className="text-base font-semibold mb-3 text-text-secondary">{c.title}</h3>
-              <p className="text-[13px] text-text-dim leading-[1.7]">
+              <h3 className="font-semibold text-text-secondary" style={{ fontSize: 16, marginBottom: 8 }}>{c.title}</h3>
+              <p className="text-text-dim" style={{ fontSize: 13, lineHeight: 1.6 }}>
                 {c.text}
               </p>
             </div>

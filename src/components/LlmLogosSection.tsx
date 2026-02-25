@@ -155,7 +155,7 @@ function MarqueeRow({ logos, dir, speed }: { logos: typeof llmLogos; dir: "left"
 
 export default function LlmLogosSection() {
   return (
-    <section className="relative py-20 overflow-hidden" data-glow="purple">
+    <section data-glow="purple" style={{ position: "relative", paddingTop: 80, paddingBottom: 80, overflow: "hidden" }}>
       <div className="container mb-10">
         <div className="section-badge mx-auto flex justify-center reveal">
           <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
@@ -175,12 +175,12 @@ export default function LlmLogosSection() {
       </div>
 
       {/* Logo marquee area */}
-      <div className="relative">
+      <div style={{ position: "relative" }}>
         {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-bg to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-bg to-transparent z-10 pointer-events-none" />
+        <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 128, background: "linear-gradient(to right, var(--color-bg), transparent)", zIndex: 10, pointerEvents: "none" }} />
+        <div style={{ position: "absolute", right: 0, top: 0, bottom: 0, width: 128, background: "linear-gradient(to left, var(--color-bg), transparent)", zIndex: 10, pointerEvents: "none" }} />
 
-        <div className="flex flex-col gap-2.5 reveal">
+        <div className="reveal" style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           <MarqueeRow logos={row1} dir="left" speed={35} />
           <MarqueeRow logos={row2} dir="right" speed={30} />
         </div>
