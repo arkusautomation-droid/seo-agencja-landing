@@ -1,5 +1,6 @@
 import Topbar from "@/components/Topbar";
 import Hero from "@/components/Hero";
+import VideoSection from "@/components/VideoSection";
 import ContractBanner from "@/components/ContractBanner";
 import VsSection from "@/components/VsSection";
 import BenefitsSection from "@/components/BenefitsSection";
@@ -24,6 +25,7 @@ export default function Home() {
       <Topbar />
       <main>
         <Hero />
+        <VideoSection />
         <ContractBanner />
         <VsSection />
         <BenefitsSection />
