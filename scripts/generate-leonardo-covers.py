@@ -65,6 +65,14 @@ ARTICLES = [
         'filename': 'google-moja-firma.png',
         'prompt': f'{BASE_STYLE}. Central glossy 3D map location pin icon in green and teal glass, hovering above a subtle 3D city/storefront miniature scene, concentric ripple rings emanating outward from pin in green light, floating pictogram icons around: star rating, phone, clock hours, camera photo, all in frosted green glass material, green and teal ambient glow, local business visibility theme'
     },
+    {
+        'filename': 'content-marketing.png',
+        'prompt': f'{BASE_STYLE}. Glossy 3D open notebook or document icon in pink and magenta glass with glowing lines of content visible on pages, floating around it: pencil writing icon, megaphone, target bullseye, upward trending graph, lightbulb idea, all in frosted pink and rose glass material, pink and magenta ambient volumetric glow, content creation and marketing strategy theme'
+    },
+    {
+        'filename': 'mobile-first.png',
+        'prompt': f'{BASE_STYLE}. Central glossy 3D smartphone icon in blue glass showing a miniature responsive website layout on screen, floating around it: speed gauge, touch finger tap icon, responsive arrows icon, checkmark shield, magnifying glass, all in frosted blue and indigo glass material, blue and electric indigo ambient glow, mobile optimization and responsiveness theme'
+    },
 ]
 
 

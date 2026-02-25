@@ -20,6 +20,8 @@ export const COVER_MAP: Record<string, string> = {
   "ai-overview-sge-jak-google-zmienia-wyniki": "ai-overview.png",
   "audyt-seo-co-sprawdzamy-pierwszy-krok": "audyt-seo.png",
   "wizytowka-google-moja-firma-darmowe-narzedzie": "google-moja-firma.png",
+  "content-marketing-seo-jak-pisac-tresci": "content-marketing.png",
+  "mobile-first-indexing-responsywnosc-2026": "mobile-first.png",
 };
 
 export function getCoverUrl(slug: string): string | undefined {
@@ -376,6 +378,76 @@ export const articles: Article[] = [
 
 <div class="article-cta">
   <p>Sprawdź, czy Twoja wizytówka Google pracuje dla Ciebie.</p>
+  <a href="/seo-oferta/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
+</div>`,
+  },
+  {
+    slug: "content-marketing-seo-jak-pisac-tresci",
+    title: "Content marketing i SEO — jak pisać treści, które rankują i sprzedają",
+    lead: "Treść to paliwo SEO. Ale nie każda treść działa. Pokazujemy jak pisać artykuły, opisy i landing pages, które Google kocha, a klienci czytają do końca.",
+    date: "2026-02-15",
+    readingTime: 8,
+    content: `<p class="article-lead">Treść to paliwo SEO. Ale nie każda treść działa. Pokazujemy jak pisać artykuły, opisy i landing pages, które Google kocha, a klienci czytają do końca.</p>
+
+<h2>Dlaczego treść jest fundamentem SEO</h2>
+<p>Google nie rankuje stron — rankuje treści. Każda podstrona Twojej witryny to osobna szansa na pojawienie się w wynikach wyszukiwania na konkretne zapytanie. Im więcej wartościowych, zoptymalizowanych treści — tym więcej drzwi wejściowych do Twojego biznesu.</p>
+<p>Ale „wartościowa treść" to nie 500 słów przepisanych z konkurencji. W 2026 roku Google potrafi ocenić, czy artykuł faktycznie odpowiada na pytanie użytkownika, czy tylko udaje że to robi. Helpful Content System aktywnie degraduje treści niskiej jakości.</p>
+
+<h2>Struktura treści SEO — szablon</h2>
+<p><strong>Nagłówek H1:</strong> Zawiera główną frazę kluczową, jest konkretny i obiecuje wartość. „Jak zwiększyć sprzedaż w sklepie online o 40% dzięki SEO" > „SEO dla e-commerce".</p>
+<p><strong>Lead (pierwsze 150 słów):</strong> Odpowiada na pytanie „dlaczego powinienem to czytać?". Zawiera główną frazę i warianty. Google wyświetla ten fragment w snippecie.</p>
+<p><strong>Nagłówki H2-H3:</strong> Każdy H2 to osobne pod-zapytanie, na które treść odpowiada. Używaj pytań, które ludzie realnie wpisują w Google. Narzędzia: AlsoAsked, AnswerThePublic, Google SGE suggestions.</p>
+<p><strong>Treść właściwa:</strong> Minimum 1500 słów dla artykułów blogowych, 800+ dla podstron usługowych. Akapity max 3-4 zdania. Listy numerowane i punktowane dla kroków i cech. Bold na kluczowych frazach i pojęciach.</p>
+<p><strong>CTA:</strong> Każdy artykuł kończy się wezwaniem do działania — formularz, link do oferty, konsultacja. Treść bez CTA to zmarnowana szansa.</p>
+
+<h2>Frazy kluczowe — jak wybierać i rozmieszczać</h2>
+<p>Zapomnij o „keyword stuffing". W 2026 liczy się intent mapping — dopasowanie treści do intencji wyszukiwania. Fraza „SEO" ma intencję informacyjną, „agencja SEO Wrocław cena" — transakcyjną. Twoja treść musi odpowiadać na właściwą intencję.</p>
+<p>Rozmieszczenie fraz: H1 (główna fraza), pierwszy akapit (główna + wariant), H2 (frazy poboczne), meta description (główna fraza), alt text obrazków, URL slug. Naturalne, nie wymuszone.</p>
+
+<h2>AI w tworzeniu treści — szansa i zagrożenie</h2>
+<p>Generowanie treści przez AI to nie oszustwo — Google oficjalnie potwierdził, że nie karze za treści AI, jeśli są wartościowe. Problem polega na tym, że 90% treści AI jest generyczne i nie wnosi nic nowego.</p>
+<p>Skuteczna strategia: AI jako asystent, nie autor. Generuj strukturę i draft, potem dodaj własne doświadczenie, dane, case studies i unikalną perspektywę. To właśnie te elementy — experience i expertise z E-E-A-T — odróżniają treść, która rankuje, od treści, która ginie.</p>
+
+<h2>Content marketing w pakietach AdAwards</h2>
+<p>W pakietach Country Standard i E-commerce Pro tworzymy i publikujemy zoptymalizowane treści regularnie — 2-4 artykuły miesięcznie. Każdy artykuł jest oparty na analizie fraz, intencji i luk w treści konkurencji. To nie „pisanie dla pisania" — to strategiczna budowa widoczności.</p>
+
+<div class="article-cta">
+  <p>Chcesz treści, które pracują na Twój biznes 24/7?</p>
+  <a href="/seo-oferta/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
+</div>`,
+  },
+  {
+    slug: "mobile-first-indexing-responsywnosc-2026",
+    title: "Mobile-first indexing — dlaczego responsywność to nie opcja, a obowiązek",
+    lead: "Od 2024 Google indeksuje TYLKO wersję mobilną Twojej strony. Jeśli na telefonie wygląda źle, ładuje się wolno lub brakuje treści — tracisz pozycje. Nawet jeśli desktop jest perfekcyjny.",
+    date: "2026-02-14",
+    readingTime: 6,
+    content: `<p class="article-lead">Od 2024 Google indeksuje TYLKO wersję mobilną Twojej strony. Jeśli na telefonie wygląda źle, ładuje się wolno lub brakuje treści — tracisz pozycje. Nawet jeśli desktop jest perfekcyjny.</p>
+
+<h2>Czym jest Mobile-First Indexing</h2>
+<p>Mobile-first indexing oznacza, że Googlebot używa mobilnej wersji strony jako głównej do indeksowania i rankingu. To nie jest opcjonalne — od lipca 2024 dotyczy 100% stron w indeksie Google. Wersja desktopowa jest drugorzędna.</p>
+<p>W praktyce: jeśli na desktopie masz 50 podstron z bogatą treścią, ale na mobile część z nich jest ukryta, obcięta lub źle wyświetlana — Google widzi tylko to, co jest na mobile. Reszta nie istnieje.</p>
+
+<h2>Responsive vs. Adaptive vs. Osobna wersja mobilna</h2>
+<p><strong>Responsive design (zalecany):</strong> Jedna strona, która dostosowuje się do rozmiaru ekranu przez CSS media queries i elastyczny layout. Google oficjalnie rekomenduje to podejście. Jeden URL, jedna wersja treści, łatwe utrzymanie.</p>
+<p><strong>Adaptive design:</strong> Serwer rozpoznaje urządzenie i serwuje inny HTML. Działa, ale wymaga podwójnego utrzymania treści i ryzyko rozbieżności między wersjami.</p>
+<p><strong>Osobna wersja mobilna (m.domain.pl):</strong> Przestarzałe podejście. Dwa osobne URL-e, ryzyko duplikacji treści, problemy z kanonizacją. Google odradza — jeśli masz, migruj na responsive.</p>
+
+<h2>Kluczowe aspekty mobilnej optymalizacji</h2>
+<p><strong>Szybkość ładowania:</strong> 53% użytkowników mobilnych opuszcza stronę, jeśli ładuje się dłużej niż 3 sekundy. Core Web Vitals (LCP, CLS, INP) mierzone są na mobile. Kompresuj obrazy (WebP/AVIF), lazy loading, minimalizuj CSS/JS.</p>
+<p><strong>Touch-friendly:</strong> Przyciski minimum 48x48px. Odstęp między elementami klikalnymi min. 8px. Formularze z odpowiednimi typami input (tel, email, number) — wyświetla właściwą klawiaturę.</p>
+<p><strong>Czytelność:</strong> Font minimum 16px na mobile. Kontrast tekstu min. 4.5:1. Brak horizontal scrollingu. Tabele zamienione na karty lub listy na małych ekranach.</p>
+<p><strong>Viewport:</strong> Meta tag viewport jest obowiązkowy: <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code>. Bez niego Google traktuje stronę jako nieresponsywną.</p>
+
+<h2>Jak sprawdzić mobilną gotowość</h2>
+<p>Narzędzia: Google Search Console (raport „Obsługa na urządzeniach mobilnych"), Lighthouse (audyt mobile), Chrome DevTools (emulacja urządzeń). Sprawdzaj regularnie — nowy deployment może zepsuć responsywność.</p>
+<p>Ręczne testy: otwórz stronę na 3 różnych urządzeniach (mały telefon ~375px, standardowy ~390px, tablet ~768px). Przejdź przez kluczowe ścieżki: strona główna, oferta, formularz kontaktowy, blog. Czy wszystko jest czytelne i klikalne?</p>
+
+<h2>Responsywność w pakietach AdAwards</h2>
+<p>Audyt responsywności to jeden z pierwszych kroków w każdym naszym pakiecie. Sprawdzamy nie tylko czy strona „wygląda OK" na telefonie, ale czy Core Web Vitals na mobile są w zielonym zakresie, czy formularze działają, czy nawigacja jest intuicyjna. Jeśli strona wymaga poprawek — wdrażamy je jako część optymalizacji technicznej.</p>
+
+<div class="article-cta">
+  <p>Sprawdź, czy Twoja strona jest gotowa na mobile-first.</p>
   <a href="/seo-oferta/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
 </div>`,
   },
