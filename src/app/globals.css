@@ -822,3 +822,11 @@ section > * {
 .footer-subtle-link:hover {
   color: rgba(255,255,255,0.5);
 }
+
+.video-avatar {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid rgba(155,98,255,0.20);
+  box-shadow: 0 0 60px rgba(155,98,255,0.12), 0 8px 32px rgba(0,0,0,0.4);
+  display: block;
+}

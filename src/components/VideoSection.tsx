@@ -1,24 +1,37 @@
-"use client";
-
 export default function VideoSection() {
   return (
     <section style={{ paddingTop: 0, paddingBottom: 32 }}>
-      <div className="container reveal" style={{ maxWidth: 420, marginLeft: "auto", marginRight: "auto" }}>
+      {/* Mobile: portrait 9:16 */}
+      <div
+        className="container reveal md:hidden"
+        style={{ maxWidth: 420, marginLeft: "auto", marginRight: "auto" }}
+      >
         <video
           autoPlay
           muted
           loop
           playsInline
           controls
-          style={{
-            width: "100%",
-            borderRadius: 20,
-            border: "1px solid rgba(155,98,255,0.20)",
-            boxShadow: "0 0 60px rgba(155,98,255,0.12), 0 8px 32px rgba(0,0,0,0.4)",
-            display: "block",
-          }}
+          className="video-avatar"
         >
           <source src="/video/avatar-ada-seo.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      {/* Desktop: landscape 16:9 */}
+      <div
+        className="container reveal hidden md:block"
+        style={{ maxWidth: 720, marginLeft: "auto", marginRight: "auto" }}
+      >
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          controls
+          className="video-avatar"
+        >
+          <source src="/video/avatar-ada-seo-16x9.mp4" type="video/mp4" />
         </video>
       </div>
     </section>
