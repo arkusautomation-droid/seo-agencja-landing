@@ -7,7 +7,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section style={{ paddingTop: 64, paddingBottom: 40, position: "relative", overflow: "hidden", textAlign: "center" }}>
+    <section style={{ paddingTop: 80, paddingBottom: 40, position: "relative", overflow: "hidden", textAlign: "center" }}>
       {/* Grid pattern */}
       <div className="bg-grid" style={{ position: "absolute", inset: 0, opacity: 0.6, zIndex: 0 }} />
 
