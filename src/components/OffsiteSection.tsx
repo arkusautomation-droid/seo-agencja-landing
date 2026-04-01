@@ -1,6 +1,6 @@
 const placements = [
   {
-    category: "Portale bran\u017Cowe",
+    category: "Portale branżowe",
     color: "text-blue",
     border: "border-[rgba(59,130,246,0.18)]",
     bg: "bg-[rgba(59,130,246,0.05)]",
@@ -10,14 +10,14 @@ const placements = [
       </svg>
     ),
     places: [
-      "meble.pl \u2014 katalog producent\u00F3w i dostawc\u00F3w",
-      "meblepolskie.pl \u2014 polska bran\u017Ca meblarska",
-      "biznesmeblowy.pl \u2014 artyku\u0142y i og\u0142oszenia bran\u017Cowe",
-      "meblobranie.pl \u2014 por\u00F3wnywarki i katalogi",
+      "meble.pl — katalog producentów i dostawców",
+      "meblepolskie.pl — polska branża meblarska",
+      "biznesmeblowy.pl — artykuły i ogłoszenia branżowe",
+      "meblobranie.pl — porównywarki i katalogi",
     ],
   },
   {
-    category: "Portale wn\u0119trzarskie",
+    category: "Portale wnętrzarskie",
     color: "text-accent-light",
     border: "border-[rgba(155,98,255,0.18)]",
     bg: "bg-[rgba(155,98,255,0.05)]",
@@ -27,10 +27,10 @@ const placements = [
       </svg>
     ),
     places: [
-      "homebook.pl \u2014 du\u017Ca platforma dla projektant\u00F3w wn\u0119trz",
-      "weranda.pl \u2014 lifestyle + wn\u0119trza",
-      "dizajn.pl \u2014 design i architektura",
-      "murator.pl \u2014 budowa i wn\u0119trza (du\u017Cy ruch)",
+      "homebook.pl — duża platforma dla projektantów wnętrz",
+      "weranda.pl — lifestyle + wnętrza",
+      "dizajn.pl — design i architektura",
+      "murator.pl — budowa i wnętrza (duży ruch)",
     ],
   },
   {
@@ -44,14 +44,14 @@ const placements = [
       </svg>
     ),
     places: [
-      "Pinterest \u2014 SEO tablic i pin\u00F3w (d\u0142ugi ogon wyszukiwa\u0144)",
-      "Houzz.com \u2014 mi\u0119dzynarodowa platforma wn\u0119trzarska",
-      "Behance / Dezeen \u2014 portfolio projektowe",
-      "Instagram \u2014 sygnały spo\u0142eczno\u015Bciowe + linki w bio",
+      "Pinterest — SEO tablic i pinów (długi ogon wyszukiwań)",
+      "Houzz.com — międzynarodowa platforma wnętrzarska",
+      "Behance / Dezeen — portfolio projektowe",
+      "Instagram — sygnały społecznościowe + linki w bio",
     ],
   },
   {
-    category: "Prasa bran\u017Cowa",
+    category: "Prasa branżowa",
     color: "text-yellow",
     border: "border-[rgba(251,191,36,0.18)]",
     bg: "bg-[rgba(251,191,36,0.05)]",
@@ -61,14 +61,14 @@ const placements = [
       </svg>
     ),
     places: [
-      "Meble Plus \u2014 magazyn bran\u017Cy meblarskiej",
-      "Furniture Poland \u2014 eksport + B2B",
-      "Wpisy go\u015Bcinne na blogach wn\u0119trzarskich",
-      "Artyku\u0142y sponsorowane w portalach regionalne",
+      "Meble Plus — magazyn branży meblarskiej",
+      "Furniture Poland — eksport + B2B",
+      "Wpisy gościnne na blogach wnętrzarskich",
+      "Artykuły sponsorowane w portalach regionalne",
     ],
   },
   {
-    category: "Spo\u0142eczno\u015Bci bran\u017Cowe",
+    category: "Społeczności branżowe",
     color: "text-green",
     border: "border-[rgba(34,197,94,0.18)]",
     bg: "bg-[rgba(34,197,94,0.05)]",
@@ -78,10 +78,10 @@ const placements = [
       </svg>
     ),
     places: [
-      "Grupy FB dla architekt\u00F3w i projektant\u00F3w wn\u0119trz",
-      "LinkedIn \u2014 profile firmy + artyku\u0142y eksperckie",
+      "Grupy FB dla architektów i projektantów wnętrz",
+      "LinkedIn — profile firmy + artykuły eksperckie",
       "Fora meblarskie i tapicerskie",
-      "Lokalne grupy \"polecam\" + wizyt\u00F3wki Google",
+      "Lokalne grupy \"polecam\" + wizytówki Google",
     ],
   },
 ];
@@ -117,14 +117,14 @@ export default function OffsiteSection() {
             </div>
             <div>
               <div className="font-semibold text-text-secondary" style={{ fontSize: 15, marginBottom: 6 }}>
-                Jak to dzia&#322;a?
+                Jak to działa?
               </div>
               <p className="text-text-dim" style={{ fontSize: 13, lineHeight: 1.7, margin: 0 }}>
-                Ustalasz miesi\u0119czny bud\u017Cet (np. 300\u00A0z\u0142, 500\u00A0z\u0142, 1\u00A0000\u00A0z\u0142 lub wi\u0119cej) &mdash;
-                my dobieramy miejsca, kt\u00F3re daj\u0105 najlepsz\u0105 jako\u015B\u0107 linku dla Twojej niszy.
-                Raportujemy ka\u017Cdy link: domen\u0119, DR, ruch i tematyczno\u015B\u0107.
+                Ustalasz miesięczny budżet (np. 300 zł, 500 zł, 1 000 zł lub więcej) &mdash;
+                my dobieramy miejsca, które dają najlepszą jakość linku dla Twojej niszy.
+                Raportujemy każdy link: domenę, DR, ruch i tematyczność.
                 <br /><br />
-                <span className="text-text-secondary font-medium">Minim. bud\u017Cet off-site: 300 z\u0142 / mies.</span> &mdash; poni\u017Cej tej kwoty efekt jest zbyt ma\u0142y, by by\u0142 sensowny.
+                <span className="text-text-secondary font-medium">Minim. budżet off-site: 300 zł / mies.</span> &mdash; poniżej tej kwoty efekt jest zbyt mały, by był sensowny.
               </p>
             </div>
           </div>
@@ -157,10 +157,10 @@ export default function OffsiteSection() {
             className="inline-flex items-center gap-2 font-semibold text-white rounded-xl transition-all duration-200 bg-gradient-to-r from-orange to-yellow hover:opacity-90 shadow-[0_4px_24px_rgba(249,115,22,0.35)]"
             style={{ padding: "14px 32px", fontSize: 15, textDecoration: "none" }}
           >
-            Zaplanuj bud\u017Cet off-site &rarr;
+            Zaplanuj budżet off-site &rarr;
           </a>
           <p className="text-text-muted" style={{ fontSize: 11, marginTop: 10 }}>
-            Wycena bezp\u0142atna &middot; Odpowiadamy w 24h
+            Wycena bezpłatna &middot; Odpowiadamy w 24h
           </p>
         </div>
 
