@@ -1675,7 +1675,7 @@ export default function AuditTool() {
                     </div>
 
                     <a
-                      href={selectedPkg.stripeLink || "/seo-oferta/#pakiety"}
+                      href={selectedPkg.stripeLink || "/#pakiety"}
                       style={{
                         display: "block",
                         width: "100%",
@@ -1718,10 +1718,10 @@ export default function AuditTool() {
 
                   <div className="options-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
                     {[
-                      { icon: "🌐", title: "Strony i sklepy internetowe", desc: "WordPress, Shopify, custom development", link: "/seo-oferta/uslugi/strony-sklepy/", color: "#9B62FF" },
-                      { icon: "🎨", title: "Brandbook i design", desc: "Identyfikacja wizualna, logo, materiały", link: "/seo-oferta/uslugi/brandbook-design/", color: "#f97316" },
-                      { icon: "📱", title: "Social media i video", desc: "Strategia social, content video, kampanie", link: "/seo-oferta/uslugi/social-media-video/", color: "#3b82f6" },
-                      { icon: "🤖", title: "Wdrażanie AI w firmie", desc: "Automatyzacja, chatboty, AI workflows", link: "/seo-oferta/uslugi/wdrazanie-ai/", color: "#22c55e" },
+                      { icon: "🌐", title: "Strony i sklepy internetowe", desc: "WordPress, Shopify, custom development", link: "/uslugi/strony-sklepy/", color: "#9B62FF" },
+                      { icon: "🎨", title: "Brandbook i design", desc: "Identyfikacja wizualna, logo, materiały", link: "/uslugi/brandbook-design/", color: "#f97316" },
+                      { icon: "📱", title: "Social media i video", desc: "Strategia social, content video, kampanie", link: "/uslugi/social-media-video/", color: "#3b82f6" },
+                      { icon: "🤖", title: "Wdrażanie AI w firmie", desc: "Automatyzacja, chatboty, AI workflows", link: "/uslugi/wdrazanie-ai/", color: "#22c55e" },
                     ].map((svc) => (
                       <a
                         key={svc.title}

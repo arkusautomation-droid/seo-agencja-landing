@@ -50,9 +50,9 @@ export default function Footer() {
             {"© 2026 AdAwards. Wszelkie prawa zastrzeżone."}
           </p>
           <div style={{ marginTop: 12 }}>
-            <a href="/seo-oferta/blog/" className="footer-subtle-link">Blog</a>
+            <a href="/blog/" className="footer-subtle-link">Blog</a>
             <span style={{ color: "rgba(255,255,255,0.2)", fontSize: 12, margin: "0 8px" }}>{" · "}</span>
-            <a href="/seo-oferta/audyt/" className="footer-subtle-link">Audyt SEO</a>
+            <a href="/audyt/" className="footer-subtle-link">Audyt SEO</a>
           </div>
         </div>
       </div>

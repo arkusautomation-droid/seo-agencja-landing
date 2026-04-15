@@ -39,7 +39,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <div className="container" style={{ maxWidth: 720, marginLeft: "auto", marginRight: "auto" }}>
             {/* Back link */}
             <a
-              href="/seo-oferta/blog/"
+              href="/blog/"
               style={{
                 display: "inline-flex",
                 alignItems: "center",

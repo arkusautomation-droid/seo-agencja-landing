@@ -26,7 +26,7 @@ export const COVER_MAP: Record<string, string> = {
 
 export function getCoverUrl(slug: string): string | undefined {
   const file = COVER_MAP[slug];
-  return file ? `/seo-oferta/blog/covers/${file}` : undefined;
+  return file ? `/blog/covers/${file}` : undefined;
 }
 
 export const articles: Article[] = [
@@ -62,7 +62,7 @@ export const articles: Article[] = [
 
 <div class="article-cta">
   <p>Chcesz zobaczyć jak GEO wygląda dla Twojej firmy?</p>
-  <a href="/seo-oferta/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
+  <a href="/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
 </div>`,
   },
   {
@@ -98,7 +98,7 @@ export const articles: Article[] = [
 
 <div class="article-cta">
   <p>Chcesz sprawdzić Core Web Vitals swojej strony?</p>
-  <a href="/seo-oferta/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
+  <a href="/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
 </div>`,
   },
   {
@@ -134,7 +134,7 @@ export const articles: Article[] = [
 
 <div class="article-cta">
   <p>Porównaj pakiety i wybierz idealny dla Twojego biznesu.</p>
-  <a href="/seo-oferta/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
+  <a href="/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
 </div>`,
   },
   {
@@ -169,7 +169,7 @@ export const articles: Article[] = [
 
 <div class="article-cta">
   <p>Sprawdź, czy Twoja strona „mówi" do Google i AI.</p>
-  <a href="/seo-oferta/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
+  <a href="/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
 </div>`,
   },
   {
@@ -203,7 +203,7 @@ export const articles: Article[] = [
 
 <div class="article-cta">
   <p>Policz swój potencjalny ROI z SEO — bezpłatnie.</p>
-  <a href="/seo-oferta/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
+  <a href="/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
 </div>`,
   },
   {
@@ -238,7 +238,7 @@ export const articles: Article[] = [
 
 <div class="article-cta">
   <p>Sprawdź, jak wygląda E-E-A-T Twojej strony.</p>
-  <a href="/seo-oferta/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
+  <a href="/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
 </div>`,
   },
   {
@@ -271,7 +271,7 @@ export const articles: Article[] = [
 
 <div class="article-cta">
   <p>Sprawdź profil linkowy swojej strony — bezpłatnie.</p>
-  <a href="/seo-oferta/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
+  <a href="/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
 </div>`,
   },
   {
@@ -304,7 +304,7 @@ export const articles: Article[] = [
 
 <div class="article-cta">
   <p>Sprawdź, czy Twoja firma jest widoczna w AI Overview.</p>
-  <a href="/seo-oferta/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
+  <a href="/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
 </div>`,
   },
   {
@@ -344,7 +344,7 @@ export const articles: Article[] = [
 
 <div class="article-cta">
   <p>Zamów bezpłatny wstępny audyt swojej strony.</p>
-  <a href="/seo-oferta/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
+  <a href="/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
 </div>`,
   },
   {
@@ -378,7 +378,7 @@ export const articles: Article[] = [
 
 <div class="article-cta">
   <p>Sprawdź, czy Twoja wizytówka Google pracuje dla Ciebie.</p>
-  <a href="/seo-oferta/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
+  <a href="/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
 </div>`,
   },
   {
@@ -413,7 +413,7 @@ export const articles: Article[] = [
 
 <div class="article-cta">
   <p>Chcesz treści, które pracują na Twój biznes 24/7?</p>
-  <a href="/seo-oferta/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
+  <a href="/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
 </div>`,
   },
   {
@@ -448,7 +448,7 @@ export const articles: Article[] = [
 
 <div class="article-cta">
   <p>Sprawdź, czy Twoja strona jest gotowa na mobile-first.</p>
-  <a href="/seo-oferta/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
+  <a href="/#pakiety" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">Zobacz pakiety SEO <span style="margin-left: 4px;">→</span></a>
 </div>`,
   },
 ];

@@ -267,7 +267,7 @@ export default function ThankYouPage() {
             >
               {/* Primary: orange gradient */}
               <a
-                href="/seo-oferta/"
+                href="/"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -299,7 +299,7 @@ export default function ThankYouPage() {
 
               {/* Secondary: border button */}
               <a
-                href="/seo-oferta/audyt/"
+                href="/audyt/"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",

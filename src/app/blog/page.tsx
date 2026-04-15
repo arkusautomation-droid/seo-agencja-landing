@@ -43,7 +43,7 @@ export default function BlogPage() {
               {articles.map((article) => (
                 <a
                   key={article.slug}
-                  href={`/seo-oferta/blog/${article.slug}/`}
+                  href={`/blog/${article.slug}/`}
                   className="glass-card reveal"
                   style={{
                     display: "block",

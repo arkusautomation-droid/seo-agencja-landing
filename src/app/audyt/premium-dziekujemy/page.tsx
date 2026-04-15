@@ -342,7 +342,7 @@ export default function PremiumThankYouPage() {
 
               {/* Secondary: border button */}
               <a
-                href="/seo-oferta/"
+                href="/"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
