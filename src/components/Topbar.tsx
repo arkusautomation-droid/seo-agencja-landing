@@ -11,7 +11,7 @@ export default function Topbar() {
             <span className="w-px h-4 bg-[rgba(255,255,255,0.1)]" />
             <span>Bezterminowa umowa</span>
           </div>
-          <a href="#pakiety" className="btn-primary" style={{ padding: "8px 20px", fontSize: 13 }}>
+          <a href="/#pakiety" className="btn-primary" style={{ padding: "8px 20px", fontSize: 13 }}>
             Zobacz pakiety
             <svg viewBox="0 0 16 16" fill="none" style={{ width: 14, height: 14 }}>
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
