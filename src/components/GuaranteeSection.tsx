@@ -30,14 +30,7 @@ export default function GuaranteeSection() {
               <strong className="text-text-secondary">
                 {"100% aktywności przewidzianych w Twoim pakiecie"}
               </strong>
-              {" \u2014 content, optymalizacja, off-site, raportowanie. Bez opóźnień, bez wymówek."}
-            </p>
-            <p className="text-text-dim" style={{ fontSize: 14, lineHeight: 1.65, marginBottom: 10 }}>
-              {"Jeśli w danym miesiącu nie zrealizujemy którejkolwiek aktywności \u2014 "}
-              <strong className="text-text-secondary">
-                {"nadrabiamy ją w kolejnym bezpłatnie"}
-              </strong>
-              {" lub pomniejszamy fakturę proporcjonalnie."}
+              {" \u2014 content, optymalizacja, off-site, raportowanie. Bez opóźnień."}
             </p>
             <p className="text-green font-semibold text-sm">
               {"Płacisz za konkretne działania. Dostajesz każde z nich."}
