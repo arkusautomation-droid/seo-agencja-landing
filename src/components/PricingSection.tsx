@@ -9,12 +9,12 @@ interface Plan {
   name: string;
   price: string;
   target: string;
-  kpis: { label: string; value: string; note: string }[];
-  oneTime?: string[];
   oneTimeLabel?: string;
-  recurring?: string[];
+  oneTime?: string[];
   recurringLabel?: string;
-  items?: string[];
+  recurring?: string[];
+  aiLabel?: string;
+  ai?: string[];
   bonus?: string;
   recommended?: boolean;
 }
@@ -41,130 +41,137 @@ const localPlans: Plan[] = [
   {
     name: "Local Start",
     price: "1 000",
-    target: "Ma\u0142e firmy, 1 lokalizacja, niska konkurencja",
-    kpis: [
-      { label: "Cel po 6 miesi\u0105cach", value: "100\u20131 000 wej\u015B\u0107 / mies.", note: "z wyszukiwarki Google (ruch organiczny)" },
-      { label: "Drugi KPI", value: "Zapytania na m-c", note: "mierzone w GA4 \u2014 cel: wzrost o 50%" },
-    ],
+    target: "Ma\u0142e firmy, 1 lokalizacja, niska konkurencja.",
     oneTimeLabel: "Jednorazowe (1. miesi\u0105c)",
-    oneTime: ["Audyt strony", "Optymalizacja i porz\u0105dek on-site", "Integracja GA4 + Search Console", "Przeredagowanie tre\u015Bci", "Dob\u00F3r 5 fraz priorytetowych"],
+    oneTime: ["Audyt strony", "Optymalizacja on-site", "Integracja GA4 + Search Console", "Prze\u015Bwietlenie tre\u015Bci", "Dob\u00F3r 5 fraz priorytetowych"],
     recurringLabel: "Cykliczne (od 2. miesi\u0105ca)",
-    recurring: ["Content: 4 000 zzs / mies.", "1 artyku\u0142 blogowy / mies.", "Optymalizacja strony: 1h / mies.", "Raport: ruch + klikni\u0119cia CTA + pozycje"],
-  },
-  {
-    name: "Local Standard",
-    price: "1 250",
-    target: "Lokalne firmy us\u0142ugowe, wi\u0119ksze miasta",
-    recommended: true,
-    kpis: [
-      { label: "Cel po 6 miesi\u0105cach", value: "150\u20131 000 wej\u015B\u0107 / mies.", note: "z wyszukiwarki Google (ruch organiczny)" },
-      { label: "Drugi KPI", value: "Zapytania na m-c", note: "mierzone w GA4 \u2014 cel: wzrost o 80%" },
-    ],
-    oneTimeLabel: "Jednorazowe (1. miesi\u0105c)",
-    oneTime: ["Wszystko z Local Start +", "Dodanie do 5 katalog\u00F3w NAP", "Optymalizacja wizyt\u00F3wki Google", "Dob\u00F3r 7 fraz priorytetowych"],
-    recurringLabel: "Cykliczne (od 2. miesi\u0105ca)",
-    recurring: ["Content: 6 000 zzs / mies.", "1 artyku\u0142 blogowy / mies.", "Optymalizacja strony: 1,5h / mies.", "Raport: ruch + leady + szacowany przych\u00F3d"],
-    bonus: "BONUS: +1 fraza co 6 miesi\u0119cy",
+    recurring: ["4 artyku\u0142y / mies.", "Optymalizacja strony: 1 h / mies.", "Raport: ruch organiczny + widoczno\u015B\u0107 fraz + pozycje"],
+    aiLabel: "AI \u2014 Sztuczna inteligencja",
+    ai: ["AI Schema markup (dane strukturalne)"],
   },
   {
     name: "Local Pro",
-    price: "1 500",
-    target: "Firmy z konkurencj\u0105, kilka us\u0142ug",
-    kpis: [
-      { label: "Cel po 6 miesi\u0105cach", value: "200\u20131 500 wej\u015B\u0107 / mies.", note: "z wyszukiwarki Google (ruch organiczny)" },
-      { label: "Drugi KPI", value: "Zapytania na m-c", note: "mierzone w GA4 \u2014 cel: wzrost o 120%" },
-    ],
+    price: "2 000",
+    target: "Lokalne firmy us\u0142ugowe, wi\u0119ksze miasta, kilka us\u0142ug.",
+    recommended: true,
     oneTimeLabel: "Jednorazowe (1. miesi\u0105c)",
-    oneTime: ["Wszystko z Local Standard +", "8 katalog\u00F3w NAP", "Analiza lokalnej konkurencji", "Dob\u00F3r 10 fraz priorytetowych"],
+    oneTime: ["Audyt + optymalizacja on-site", "Integracja GA4 + Search Console", "Optymalizacja wizyt\u00F3wki Google", "Analiza lokalnej konkurencji", "Dob\u00F3r 10 fraz priorytetowych"],
     recurringLabel: "Cykliczne (od 2. miesi\u0105ca)",
-    recurring: ["Content: 10 000 zzs / mies.", "2 artyku\u0142y / mies.", "Optymalizacja strony: 2h / mies.", "Off-site: bud\u017Cet 100 z\u0142 / mies.", "Raport: ruch + leady + przych\u00F3d + rekomendacje"],
-    bonus: "BONUS: +2 frazy co 6 miesi\u0119cy",
+    recurring: ["8 artyku\u0142\u00F3w / mies.", "Optymalizacja strony: 2 h / mies.", "Raport: ruch organiczny + widoczno\u015B\u0107 + dynamika wzrostu"],
+    aiLabel: "AI \u2014 Sztuczna inteligencja",
+    ai: ["AI Schema markup (dane strukturalne)", "AI Q&A pytania i odpowiedzi (FAQ Schema)"],
+    bonus: "BONUS: 1 fraza co 6 miesi\u0119cy",
   },
   {
     name: "Local Leader",
-    price: "2 000",
-    target: "Dominacja lokalna, wiele us\u0142ug",
-    kpis: [
-      { label: "Cel po 6 miesi\u0105cach", value: "300\u20132 000 wej\u015B\u0107 / mies.", note: "z wyszukiwarki Google (ruch organiczny)" },
-      { label: "Drugi KPI", value: "Zapytania na m-c", note: "mierzone w GA4 \u2014 cel: wzrost o 200%" },
-    ],
+    price: "3 000",
+    target: "Dominacja lokalna, wiele us\u0142ug, du\u017Ca konkurencja.",
     oneTimeLabel: "Jednorazowe (1. miesi\u0105c)",
-    oneTime: ["Wszystko z Local Pro +", "10 katalog\u00F3w NAP", "Testy A/B", "Dob\u00F3r 15 fraz priorytetowych"],
+    oneTime: ["Pe\u0142ny audyt + strategia tre\u015Bci", "GA4 + Search Console + testy A/B", "Optymalizacja wizyt\u00F3wki Google", "Dob\u00F3r 15 fraz priorytetowych"],
     recurringLabel: "Cykliczne (od 2. miesi\u0105ca)",
-    recurring: ["Content: 14 000 zzs / mies.", "2-3 artyku\u0142y / mies.", "Optymalizacja strony: 2,5h / mies.", "Off-site: bud\u017Cet 250 z\u0142 / mies.", "GEO: widoczno\u015B\u0107 w ChatGPT / Gemini / Perplexity", "Raport: ruch + leady + przych\u00F3d + ROI"],
-    bonus: "BONUS: +3 frazy co 6 miesi\u0119cy",
+    recurring: ["12 artyku\u0142\u00F3w / mies.", "Optymalizacja strony: 2,5 h / mies.", "Raport: ruch organiczny + widoczno\u015B\u0107 + obecno\u015B\u0107 w AI Overview"],
+    aiLabel: "AI \u2014 Sztuczna inteligencja",
+    ai: ["AI Schema markup (dane strukturalne)", "AI Q&A pytania i odpowiedzi (FAQ Schema)", "AI Topical Map \u2014 mapa tematyczna fraz", "GEO AI \u2014 widoczno\u015B\u0107 w modelach j\u0119zykowych"],
+    bonus: "BONUS: 2 frazy co 6 miesi\u0119cy",
   },
 ];
 
 const countryPlans: Plan[] = [
   {
-    name: "Country Start",
-    price: "2 500",
-    target: "Firma og\u00F3lnopolska, nisza, do 20 fraz",
-    kpis: [{ label: "Cel po 6 miesi\u0105cach", value: "10\u201330 lead\u00F3w / mies.", note: "formularze + telefony z ruchu organicznego" }],
+    name: "Country Starter",
+    price: "3 000",
+    target: "Firma og\u00F3lnopolska, nisza: strategiczne zdobywanie autorytetu.",
     oneTimeLabel: "Jednorazowe",
-    oneTime: ["Audyt + optymalizacja on-site", "GA4 + Search Console", "Wizyt\u00F3wka Google", "20 fraz priorytetowych", "Analiza konkurencji + testy A/B"],
+    oneTime: ["Audyt + optymalizacja on-site", "GA4 + Search Console", "20 fraz priorytetowych", "Analiza konkurencji"],
     recurringLabel: "Cykliczne",
-    recurring: ["Content: 20 000 zzs / mies.", "Off-site: 300 z\u0142 / mies.", "Optymalizacja: 3h / mies.", "Raport: ruch + leady + przych\u00F3d"],
-    bonus: "BONUS: +3 frazy co 6 mies.",
+    recurring: ["12 artyku\u0142\u00F3w / mies.", "Optymalizacja: 3 h / mies.", "Raport: ruch organiczny + widoczno\u015B\u0107 + dynamika wzrostu"],
+    aiLabel: "AI \u2014 Sztuczna inteligencja",
+    ai: ["AI Schema markup (dane strukturalne)", "AI Q&A pytania i odpowiedzi (FAQ Schema)"],
+    bonus: "BONUS: 3 frazy co 6 miesi\u0119cy",
   },
   {
     name: "Country Standard",
-    price: "3 500",
-    target: "\u015Arednia firma, rozbudowana oferta",
+    price: "5 000",
+    target: "Content hub + topical map: strategiczne zdobywanie autorytetu.",
     recommended: true,
-    kpis: [{ label: "Cel po 6 miesi\u0105cach", value: "20\u201350 lead\u00F3w / mies.", note: "formularze + telefony z ruchu organicznego" }],
     oneTimeLabel: "Jednorazowe",
-    oneTime: ["Wszystko z Country Start +", "30 fraz priorytetowych", "Klastry tematyczne (strategia tre\u015Bci)"],
+    oneTime: ["Audyt + optymalizacja on-site", "GA4 + Search Console", "30 fraz priorytetowych", "Klastry tematyczne (strategia tre\u015Bci)"],
     recurringLabel: "Cykliczne",
-    recurring: ["Content: 30 000 zzs / mies.", "Off-site: 500 z\u0142 / mies.", "Optymalizacja: 4h / mies.", "GEO: widoczno\u015B\u0107 w AI Overview", "Raport + omawianie ze specjalist\u0105"],
-    bonus: "BONUS: +4 frazy co 6 mies.",
+    recurring: ["20 artyku\u0142\u00F3w / mies.", "Optymalizacja: 4 h / mies.", "GEO: widoczno\u015B\u0107 w AI Overview", "Raport + omawianie ze specjalist\u0105"],
+    aiLabel: "AI \u2014 Sztuczna inteligencja",
+    ai: ["AI Schema markup (dane strukturalne)", "AI Q&A pytania i odpowiedzi (FAQ Schema)", "AI Topical Map \u2014 mapa tematyczna fraz"],
+    bonus: "BONUS: 4 frazy co 6 miesi\u0119cy",
   },
   {
     name: "Country Pro",
-    price: "5 000",
-    target: "Du\u017Ca firma, silna konkurencja",
-    kpis: [{ label: "Cel po 6 miesi\u0105cach", value: "50\u2013100 lead\u00F3w / mies.", note: "formularze + telefony z ruchu organicznego" }],
-    items: ["50 fraz + klastry tematyczne", "Content: 40 000 zzs / mies.", "Off-site: 750 z\u0142 / mies.", "Optymalizacja: 5h / mies.", "GEO + monitoring trend\u00F3w", "Omawianie raport\u00F3w ze specjalist\u0105", "Prognoza przychodu z SEO (kwartalnie)"],
+    price: "7 000",
+    target: "Content hub + topical map: strategiczne zdobywanie autorytetu.",
+    oneTimeLabel: "Jednorazowe",
+    oneTime: ["Audyt + optymalizacja on-site", "GA4 + Search Console", "50 fraz priorytetowych", "Klastry tematyczne (strategia tre\u015Bci)"],
+    recurringLabel: "Cykliczne",
+    recurring: ["28 artyku\u0142\u00F3w / mies.", "Optymalizacja: 5 h / mies.", "GEO + monitoring trend\u00F3w", "Omawianie raport\u00F3w ze specjalist\u0105", "Analiza widoczno\u015Bci w AI (kwartalnie)"],
+    aiLabel: "AI \u2014 Sztuczna inteligencja",
+    ai: ["AI Schema markup (dane strukturalne)", "AI Q&A pytania i odpowiedzi (FAQ Schema)", "AI Topical Map \u2014 mapa tematyczna fraz", "GEO AI \u2014 widoczno\u015B\u0107 w modelach j\u0119zykowych"],
   },
   {
     name: "Country Leader",
-    price: "8 000",
-    target: "Lider bran\u017Cy, maksymalna dominacja",
-    kpis: [{ label: "Cel po 6 miesi\u0105cach", value: "100\u2013200 lead\u00F3w / mies.", note: "formularze + telefony z ruchu organicznego" }],
-    items: ["75 fraz + pe\u0142na strategia content", "Content: 50 000 zzs / mies.", "Off-site: 1 500 z\u0142 / mies.", "Optymalizacja: 7h / mies.", "GEO + monitoring + raporty konkurencji", "Dedykowany strateg SEO", "Integracja z narz\u0119dziami marketingowymi"],
+    price: "10 000",
+    target: "Content hub + topical map: strategiczne zdobywanie autorytetu.",
+    oneTimeLabel: "Jednorazowe",
+    oneTime: ["Audyt + optymalizacja on-site", "GA4 + Search Console", "75 fraz priorytetowych", "Pe\u0142na strategia content"],
+    recurringLabel: "Cykliczne",
+    recurring: ["40 artyku\u0142\u00F3w / mies.", "Optymalizacja: 7 h / mies.", "GEO + monitoring + raporty konkurencji", "Dedykowany strateg SEO", "Integracja z narz\u0119dziami marketingowymi"],
+    aiLabel: "AI \u2014 Sztuczna inteligencja",
+    ai: ["AI Schema markup (dane strukturalne)", "AI Q&A pytania i odpowiedzi (FAQ Schema)", "AI Topical Map \u2014 mapa tematyczna fraz", "GEO AI \u2014 widoczno\u015B\u0107 w modelach j\u0119zykowych", "AI Brief strategiczny \u2014 automatyczna analiza okazji contentowych"],
   },
 ];
 
 const ecomPlans: Plan[] = [
   {
-    name: "E-commerce Basic",
+    name: "E-Com Starter",
+    price: "3 000",
+    target: "Sklep 10 produkt\u00F3w / mies.",
+    recurringLabel: "Aktywno\u015Bci",
+    recurring: ["Audyt + optymalizacja on-site", "10 produkt\u00F3w / mies. (opisy + meta)", "12 artyku\u0142\u00F3w / mies.", "Optymalizacja: 4 h / mies.", "Raport: ruch organiczny, widoczno\u015B\u0107, konwersje"],
+    aiLabel: "AI \u2014 Sztuczna inteligencja",
+    ai: ["AI Schema dla produkt\u00F3w (Product + Offer Schema)"],
+  },
+  {
+    name: "E-Com Basic",
+    price: "5 000",
+    target: "Sklep 15 produkt\u00F3w / mies.",
+    recurringLabel: "Aktywno\u015Bci",
+    recurring: ["Audyt + optymalizacja on-site", "15 produkt\u00F3w / mies. (opisy + meta)", "20 artyku\u0142\u00F3w / mies.", "Optymalizacja: 6 h / mies.", "Monitoring trend\u00F3w + raporty konkurencji", "Raport: ruch organiczny, widoczno\u015B\u0107, konwersje"],
+    aiLabel: "AI \u2014 Sztuczna inteligencja",
+    ai: ["AI Schema dla produkt\u00F3w (Product + Offer Schema)", "AI Q&A \u2014 sekcja pyta\u0144 do produkt\u00F3w"],
+  },
+  {
+    name: "E-Com Standard",
     price: "10 000",
-    target: "Sklep do 100 produkt\u00F3w",
-    kpis: [{ label: "Cel po 6 miesi\u0105cach", value: "+300% ruchu z Google", note: "Wzrost przychodu organicznego o ~40%" }],
-    items: ["Audyt + optymalizacja 100 produkt\u00F3w", "Content: 60 000 zzs / mies.", "Off-site: 2 000 z\u0142 / mies.", "Optymalizacja: 10h / mies.", "Monitoring trend\u00F3w + raporty konkurencji", "Konsultacje UX i CRO", "Raport: ruch \u2192 konwersje \u2192 przych\u00F3d"],
-  },
-  {
-    name: "E-commerce Pro",
-    price: "15 000",
-    target: "Sklep do 150 produkt\u00F3w, rozbudowany",
+    target: "Sklep 20 produkt\u00F3w / mies.",
     recommended: true,
-    kpis: [{ label: "Cel po 6 miesi\u0105cach", value: "+500% ruchu z Google", note: "Wzrost przychodu organicznego o ~70%" }],
-    items: ["Optymalizacja 150 produkt\u00F3w", "Content: 70 000 zzs / mies.", "Off-site: 3 000 z\u0142 / mies.", "Optymalizacja: 15h / mies.", "GEO + integracja z rekomendacjami", "Konsultacje UX/CRO", "Omawianie raport\u00F3w ze specjalist\u0105"],
+    recurringLabel: "Aktywno\u015Bci",
+    recurring: ["Audyt + optymalizacja on-site", "20 produkt\u00F3w / mies. (opisy + meta)", "40 artyku\u0142\u00F3w / mies.", "Optymalizacja: 10 h / mies.", "Monitoring trend\u00F3w + raporty konkurencji", "Konsultacje UX i CRO", "Raport: ruch organiczny, widoczno\u015B\u0107, konwersje"],
+    aiLabel: "AI \u2014 Sztuczna inteligencja",
+    ai: ["AI Schema dla produkt\u00F3w (Product + Offer Schema)", "AI Q&A \u2014 sekcja pyta\u0144 do produkt\u00F3w", "AI Topical Map kategorii \u2014 mapa tematyczna asortymentu"],
   },
   {
-    name: "E-commerce Advanced",
+    name: "E-Com Pro",
+    price: "15 000",
+    target: "Sklep 30 produkt\u00F3w / mies.",
+    recurringLabel: "Aktywno\u015Bci",
+    recurring: ["Audyt + optymalizacja on-site", "30 produkt\u00F3w / mies. (opisy + meta)", "60 artyku\u0142\u00F3w / mies.", "Optymalizacja: 15 h / mies.", "GEO + integracja z rekomendacjami AI", "Konsultacje UX / CRO", "Omawianie raport\u00F3w ze specjalist\u0105"],
+    aiLabel: "AI \u2014 Sztuczna inteligencja",
+    ai: ["AI Schema dla produkt\u00F3w (Product + Offer Schema)", "AI Q&A \u2014 sekcja pyta\u0144 do produkt\u00F3w", "AI Topical Map kategorii", "GEO AI \u2014 monitoring widoczno\u015Bci w modelach j\u0119zykowych"],
+  },
+  {
+    name: "E-Com Leader",
     price: "20 000",
-    target: "Du\u017Cy sklep, 200+ produkt\u00F3w",
-    kpis: [{ label: "Cel po 6 miesi\u0105cach", value: "+700% ruchu z Google", note: "Wzrost przychodu organicznego o ~100%" }],
-    items: ["Optymalizacja 200 produkt\u00F3w", "Content: 85 000 zzs / mies.", "Off-site: 4 500 z\u0142 / mies.", "Optymalizacja: 25h / mies.", "GEO + monitoring globalny", "Rozbudowane raporty przychodu", "Dedykowany strateg + konsultacje UX"],
-  },
-  {
-    name: "E-commerce Leader",
-    price: "30 000",
-    target: "Enterprise, 300+ produkt\u00F3w",
-    kpis: [{ label: "Cel po 6 miesi\u0105cach", value: "+1000% ruchu z Google", note: "Pe\u0142na dominacja kategorii" }],
-    items: ["Optymalizacja 300 produkt\u00F3w", "Content: 100 000 zzs / mies.", "Off-site: 6 000 z\u0142 / mies.", "Optymalizacja: 40h / mies.", "Dedykowany specjalista + wsparcie graficzne 10h/mies.", "Globalna analiza rynku", "Analiza \u015Bcie\u017Cki UX + redesign", "Strategia marketingowa + prognoza przychod\u00F3w"],
+    target: "Sklep 50 produkt\u00F3w / mies.",
+    recurringLabel: "Aktywno\u015Bci",
+    recurring: ["Audyt + optymalizacja on-site", "50 produkt\u00F3w / mies. (opisy + meta)", "80 artyku\u0142\u00F3w / mies.", "Optymalizacja: 25 h / mies.", "GEO + monitoring globalny", "Rozbudowane raporty widoczno\u015Bci", "Dedykowany strateg + konsultacje UX"],
+    aiLabel: "AI \u2014 Sztuczna inteligencja",
+    ai: ["AI Schema dla produkt\u00F3w (Product + Offer Schema)", "AI Q&A \u2014 sekcja pyta\u0144 do produkt\u00F3w", "AI Topical Map kategorii", "GEO AI \u2014 monitoring widoczno\u015Bci w modelach j\u0119zykowych", "AI Brief strategiczny \u2014 automatyczna analiza okazji contentowych", "Monitoring AI Overview \u2014 \u015Bledzenie cytowa\u0144 w Google AI"],
   },
 ];
 
@@ -174,7 +181,13 @@ const tabPlans: Record<TabId, Plan[]> = {
   ecom: ecomPlans,
 };
 
-/* Color scheme per tab */
+/* Grid columns per tab (3 / 4 / 5 packages) */
+const gridClass: Record<TabId, string> = {
+  local: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
+  country: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
+  ecom: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5",
+};
+
 const tabColors: Record<TabId, {
   accent: string; accentLight: string; glow: string; glowStrong: string;
   border: string; borderRec: string; subtle: string; shadowRec: string;
@@ -209,23 +222,21 @@ const recBadgeColors: Record<TabId, string> = {
   ecom: "bg-gradient-to-r from-[#16a34a] to-[#4ade80] shadow-[0_2px_12px_rgba(34,197,94,0.4)]",
 };
 
-/* Map plan names to package IDs from packages.ts */
 const planToPackageId: Record<string, string> = {
   "Local Start": "local-start",
-  "Local Standard": "local-standard",
   "Local Pro": "local-pro",
   "Local Leader": "local-leader",
-  "Country Start": "country-start",
+  "Country Starter": "country-starter",
   "Country Standard": "country-standard",
   "Country Pro": "country-pro",
   "Country Leader": "country-leader",
-  "E-commerce Basic": "ecom-basic",
-  "E-commerce Pro": "ecom-pro",
-  "E-commerce Advanced": "ecom-advanced",
-  "E-commerce Leader": "ecom-leader",
+  "E-Com Starter": "ecom-starter",
+  "E-Com Basic": "ecom-basic",
+  "E-Com Standard": "ecom-standard",
+  "E-Com Pro": "ecom-pro",
+  "E-Com Leader": "ecom-leader",
 };
 
-/* Button accent colors per tab */
 const btnColors: Record<TabId, { bg: string; hover: string; shadow: string }> = {
   local: { bg: "bg-accent", hover: "hover:bg-accent-light", shadow: "shadow-[0_4px_20px_rgba(155,98,255,0.35)]" },
   country: { bg: "bg-blue", hover: "hover:bg-[#60a5fa]", shadow: "shadow-[0_4px_20px_rgba(59,130,246,0.35)]" },
@@ -255,24 +266,16 @@ function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
       <div className="font-bold leading-tight" style={{ fontSize: 32, marginBottom: 4 }}>
         {plan.price} <span className="text-text-dim font-normal" style={{ fontSize: 14 }}>{`z\u0142 / mies.`}</span>
       </div>
-      <div className="text-text-muted" style={{ fontSize: 12, marginBottom: 20, lineHeight: 1.5 }}>{plan.target}</div>
+      <div className="text-text-muted" style={{ fontSize: 12, marginBottom: 16, lineHeight: 1.5 }}>{plan.target}</div>
 
-      {plan.kpis.map((kpi, i) => (
-        <div key={i} className={`${c.border} border ${c.subtle}`} style={{ padding: "16px 18px", marginBottom: 10, marginTop: i > 0 ? 4 : 0, borderRadius: 10 }}>
-          <div className={`text-[10px] uppercase tracking-[1px] font-semibold ${c.accent}`} style={{ marginBottom: 4 }}>{kpi.label}</div>
-          <div className="font-bold text-text-secondary" style={{ fontSize: 17, marginBottom: 2 }}>{kpi.value}</div>
-          <div className="text-[11px] text-text-dim" style={{ marginTop: 4 }}>{kpi.note}</div>
-        </div>
-      ))}
-
-      <hr className="border-t border-[rgba(255,255,255,0.06)]" style={{ margin: "20px 0" }} />
+      <hr className="border-t border-[rgba(255,255,255,0.06)]" style={{ margin: "8px 0 16px" }} />
 
       {plan.oneTime && (
         <>
-          <div className="text-[10px] uppercase tracking-[1.2px] text-text-muted font-semibold" style={{ marginBottom: 12, marginTop: 4 }}>{plan.oneTimeLabel}</div>
-          <ul className="list-none" style={{ marginBottom: 16 }}>
+          <div className="text-[10px] uppercase tracking-[1.2px] text-text-muted font-semibold" style={{ marginBottom: 10 }}>{plan.oneTimeLabel}</div>
+          <ul className="list-none" style={{ marginBottom: 14 }}>
             {plan.oneTime.map((item, i) => (
-              <li key={i} className="text-text-secondary flex items-start gap-2.5" style={{ padding: "5px 0", fontSize: 13, lineHeight: 1.5, gap: 8 }}>
+              <li key={i} className="text-text-secondary flex items-start" style={{ padding: "4px 0", fontSize: 13, lineHeight: 1.5, gap: 8 }}>
                 <span className={`font-bold shrink-0 mt-px text-[11px] ${c.checkColor}`}>&#10003;</span>
                 {item}
               </li>
@@ -283,10 +286,10 @@ function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
 
       {plan.recurring && (
         <>
-          <div className="text-[10px] uppercase tracking-[1.2px] text-text-muted font-semibold" style={{ marginBottom: 12, marginTop: 4 }}>{plan.recurringLabel}</div>
-          <ul className="list-none" style={{ marginBottom: 16 }}>
+          <div className="text-[10px] uppercase tracking-[1.2px] text-text-muted font-semibold" style={{ marginBottom: 10 }}>{plan.recurringLabel}</div>
+          <ul className="list-none" style={{ marginBottom: 14 }}>
             {plan.recurring.map((item, i) => (
-              <li key={i} className="text-text-secondary flex items-start gap-2.5" style={{ padding: "5px 0", fontSize: 13, lineHeight: 1.5, gap: 8 }}>
+              <li key={i} className="text-text-secondary flex items-start" style={{ padding: "4px 0", fontSize: 13, lineHeight: 1.5, gap: 8 }}>
                 <span className={`font-bold shrink-0 mt-px text-[11px] ${c.checkColor}`}>&#10003;</span>
                 {item}
               </li>
@@ -295,24 +298,26 @@ function PlanCard({ plan, tab }: { plan: Plan; tab: TabId }) {
         </>
       )}
 
-      {plan.items && (
-        <ul className="list-none" style={{ marginBottom: 16 }}>
-          {plan.items.map((item, i) => (
-            <li key={i} className="text-text-secondary flex items-start gap-2.5" style={{ padding: "5px 0", fontSize: 13, lineHeight: 1.5, gap: 8 }}>
-              <span className={`font-bold shrink-0 mt-px text-[11px] ${c.checkColor}`}>&#10003;</span>
-              {item}
-            </li>
-          ))}
-        </ul>
+      {plan.ai && (
+        <>
+          <div className={`text-[10px] uppercase tracking-[1.2px] font-semibold ${c.accent}`} style={{ marginBottom: 10 }}>{plan.aiLabel}</div>
+          <ul className="list-none" style={{ marginBottom: 14 }}>
+            {plan.ai.map((item, i) => (
+              <li key={i} className="text-text-secondary flex items-start" style={{ padding: "4px 0", fontSize: 13, lineHeight: 1.5, gap: 8 }}>
+                <span className={`font-bold shrink-0 mt-px text-[11px] ${c.checkColor}`}>&#10003;</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </>
       )}
 
       {plan.bonus && (
-        <div className={`text-xs rounded-lg ${c.subtle} border border-dashed ${c.bonusBorder} ${c.accent} font-medium`} style={{ marginTop: 12, padding: "10px 14px", fontSize: 12 }}>
+        <div className={`text-xs rounded-lg ${c.subtle} border border-dashed ${c.bonusBorder} ${c.accent} font-medium`} style={{ marginTop: 4, padding: "10px 14px", fontSize: 12 }}>
           {plan.bonus}
         </div>
       )}
 
-      {/* Order button */}
       <div style={{ marginTop: "auto", paddingTop: 20 }}>
         <a
           href={stripeLink || "#kontakt"}
@@ -348,13 +353,13 @@ export default function PricingSection() {
           activeTab === "local" ? "text-gradient-white-purple" :
           activeTab === "country" ? "text-gradient-white-blue" :
           "text-gradient-white-green"
-        }`}>Pakiety z konkretnymi celami wzrostu</h2>
+        }`}>Pakiety cenowe</h2>
         <p className={`section-sub visible transition-colors duration-300 ${
           activeTab === "local" ? "!text-accent-light" :
           activeTab === "country" ? "!text-blue" :
           "!text-green"
         }`}>
-          {"Ka\u017Cdy pakiet = konkretny KPI, kt\u00F3ry mierzysz. Umowa bezterminowa, 1-miesi\u0119czne wypowiedzenie."}
+          {"Umowa bezterminowa, 1-miesi\u0119czne wypowiedzenie. Wszystkie ceny netto."}
         </p>
 
         {/* Tabs */}
@@ -378,7 +383,7 @@ export default function PricingSection() {
         </div>
 
         {/* Plans grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-start" style={{ gap: 20 }}>
+        <div className={`grid items-start ${gridClass[activeTab]}`} style={{ gap: 20 }}>
           {tabPlans[activeTab].map((plan, i) => (
             <PlanCard key={`${activeTab}-${i}`} plan={plan} tab={activeTab} />
           ))}

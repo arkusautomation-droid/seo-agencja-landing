@@ -2,22 +2,22 @@ const cards = [
   {
     type: "old" as const,
     title: "\u201EMasz 197 fraz w TOP 10\u201D",
-    text: "Brzmi \u015Bwietnie \u2014 ale ile z nich generuje telefony? Wi\u0119kszo\u015B\u0107 agencji raportuje widoczno\u015B\u0107, nie pieni\u0105dze. Pozycja 8 na fraz\u0119 o 10 wyszukiwaniach = 0 klient\u00F3w.",
+    text: "Brzmi \u015Bwietnie, ale ile z nich jest widocznych w odpowiedziach AI? Wi\u0119kszo\u015B\u0107 agencji nie uwzgl\u0119dnia nowych kana\u0142\u00F3w wyszukiwania.",
   },
   {
     type: "new" as const,
-    title: "\u201E47 zapyta\u0144 z Google warte ~23 000 z\u0142\u201D",
-    text: "Targetujemy frazy z intencj\u0105 zakupow\u0105. Raportujemy ruch \u2192 formularze \u2192 telefony \u2192 szacowany przych\u00F3d. Widzisz ROI, nie metryki pr\u00F3\u017Cno\u015Bci.",
+    title: "Widoczno\u015B\u0107 tam, gdzie Twoi klienci szukaj\u0105: Google, AI i LLM",
+    text: "GEO sprawia, \u017Ce Twoja firma pojawia si\u0119 w odpowiedziach ChatGPT, Google AI Overview i Gemini.",
   },
   {
     type: "old" as const,
-    title: "\u201EPozycjonowanie fraz bez limitu\u201D",
-    text: "Agencje dodaj\u0105 setki fraz long tail, kt\u00F3rych nikt nie wyszukuje. Raport wygl\u0105da imponuj\u0105co \u2014 Twoje konto bankowe nie.",
+    title: "Pozycjonowanie fraz bez limitu",
+    text: "Agencje dodaj\u0105 setki fraz long tail, kt\u00F3rych nikt nie wyszukuje, zamiast skupi\u0107 si\u0119 na tych, kt\u00F3re maj\u0105 realn\u0105 warto\u015B\u0107.",
   },
   {
     type: "new" as const,
-    title: "Priorytet: frazy, po kt\u00F3rych ludzie kupuj\u0105",
-    text: "Analizujemy intencj\u0119, wolumen i warto\u015B\u0107 klikni\u0119cia. Skupiamy bud\u017Cet na frazach, kt\u00F3re nap\u0119dzaj\u0105 biznes \u2014 nie statystyki.",
+    title: "Priorytet: frazy o realnej warto\u015Bci",
+    text: "Analizujemy intencj\u0119, wolumen i potencja\u0142 konwersji. Bud\u017Cet na frazy, kt\u00F3re maj\u0105 znaczenie dla Twojego biznesu.",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function VsSection() {
           <span className="text-gradient-orange">{"zmieniamy zasady gry"}</span>
         </h2>
         <p className="section-sub reveal">
-          {"Typowe oferty SEO mierzą pozycje. My mierzymy Twój przychód."}
+          {"Typowe oferty SEO ko\u0144cz\u0105 si\u0119 na pozycjach w Google. My budujemy widoczno\u015B\u0107 tam, gdzie dzi\u015B szukaj\u0105 Twoi klienci \u2014 w Google, AI i modelach j\u0119zykowych."}
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 reveal-stagger" style={{ gap: 16, maxWidth: 960, marginLeft: "auto", marginRight: "auto" }}>
           {cards.map((c, i) => (
@@ -65,7 +65,7 @@ export default function VsSection() {
                     <path d="M3 8l4 4 6-7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 )}
-                {c.type === "old" ? "Stare podej\u015Bcie" : "Podej\u015Bcie AdAwards"}
+                {c.type === "old" ? "Stare podej\u015Bcie" : "Podej\u015Bcie AD Awards"}
               </div>
               <h3 className="font-semibold text-text-secondary" style={{ fontSize: 16, marginBottom: 8 }}>{c.title}</h3>
               <p className="text-text-dim" style={{ fontSize: 13, lineHeight: 1.6 }}>

@@ -100,11 +100,10 @@ export default function OffsiteSection() {
           Off-site SEO
         </div>
         <h2 className="section-title text-gradient-white-yellow reveal">
-          Off-site SEO &mdash; budujesz autorytet poza swoją stroną
+          Off-site SEO
         </h2>
         <p className="section-sub reveal">
-          Off-site nie jest wliczony w pakiety &mdash; <strong className="text-text-secondary">sam decydujesz, ile miesięcznie chcesz zainwestować</strong>.
-          Przygotowujemy strategię i realizujemy. Poniżej miejsca, które budują autorytet w branży meblarskiej.
+          Działania off-site nie są wliczone w pakiety. <strong className="text-text-secondary">Sam decydujesz, jaki budżet chcesz przeznaczyć</strong>.*
         </p>
 
         {/* Budget info box */}
@@ -120,11 +119,9 @@ export default function OffsiteSection() {
                 Jak to działa?
               </div>
               <p className="text-text-dim" style={{ fontSize: 13, lineHeight: 1.7, margin: 0 }}>
-                Ustalasz miesięczny budżet (np. 300 zł, 500 zł, 1 000 zł lub więcej) &mdash;
-                my dobieramy miejsca, które dają najlepszą jakość linku dla Twojej niszy.
-                Raportujemy każdy link: domenę, DR, ruch i tematyczność.
+                Ustalasz miesięczny budżet &mdash; my dobieramy miejsca, które dają najlepszą jakość linku dla Twojej niszy. Raportujemy każdy link: domenę, DR, ruch i tematyczność.
                 <br /><br />
-                <span className="text-text-secondary font-medium">Minim. budżet off-site: 300 zł / mies.</span> &mdash; poniżej tej kwoty efekt jest zbyt mały, by był sensowny.
+                <span className="text-text-secondary font-medium">*Budżet minimalny: 300 zł / mies.</span>
               </p>
             </div>
           </div>

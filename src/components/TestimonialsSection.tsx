@@ -1,23 +1,23 @@
 const testimonials = [
   {
     quote:
-      "Z firm\u0105 Ad Awards Sp. J. z Legnicy mamy przyjemno\u015B\u0107 wsp\u00F3\u0142pracowa\u0107 od kilku lat w zakresie obs\u0142ugi social medi\u00F3w, generowania lead\u00F3w, Google Ads, remarketingu, kampanii banerowych oraz projektowania stron www. Komfort korzystania z tak szerokiego wachlarza us\u0142ug skupionego w jednej agencji, spos\u00F3b komunikacji z klientem, realizacja kampanii i ich efekty utrwalaj\u0105 nasz\u0105 wsp\u00F3\u0142prac\u0119 na kolejne lata.",
+      "Z firm\u0105 Ad Awards mamy przyjemno\u015B\u0107 wsp\u00F3\u0142pracowa\u0107 od kilku lat. Komfort korzystania z tak szerokiego wachlarza us\u0142ug skupionego w jednej agencji utrwala nasz\u0105 wsp\u00F3\u0142prac\u0119 na kolejne lata.",
     name: "Igor Gorzycki",
     role: "Dyrektor ds. jako\u015Bci i marketingu",
     company: "Nissan Yama",
   },
   {
     quote:
-      "Z Agencj\u0105 Medialn\u0105 Ad Awards wsp\u00F3\u0142pracujemy nieprzerwanie od 2018 r. Wsp\u00F3\u0142praca przebiega g\u0142\u00F3wnie w kanale Social Media. Profesjonalne podej\u015Bcie, terminowo\u015B\u0107 i kreatywno\u015B\u0107 w realizacji kampanii sprawiaj\u0105, \u017Ce z przyjemno\u015Bci\u0105 kontynuujemy wsp\u00F3\u0142prac\u0119.",
+      "Profesjonalne podej\u015Bcie, terminowo\u015B\u0107 i kreatywno\u015B\u0107 w realizacji kampanii sprawiaj\u0105, \u017Ce z przyjemno\u015Bci\u0105 kontynuujemy wsp\u00F3\u0142prac\u0119.",
     name: "Joanna Komorowska",
-    role: "Marketing / Dzia\u0142 obs\u0142ugi posprzeda\u017Cnej",
+    role: "",
     company: "Toyota \u0141\u00F3d\u017A",
   },
   {
     quote:
-      "Z Agencj\u0105 Medialn\u0105 AD Awards wsp\u00F3\u0142pracujemy od 2017 roku. Dzia\u0142ania jakie wykonuje dla nas AD Awards charakteryzuj\u0105 si\u0119 profesjonalizmem i fachowym doradztwem na ka\u017Cdym etapie realizacji projekt\u00F3w.",
+      "Dzia\u0142ania AD Awards charakteryzuj\u0105 si\u0119 profesjonalizmem i fachowym doradztwem na ka\u017Cdym etapie realizacji.",
     name: "Karolina Wa\u0142owska",
-    role: "Marketing Manager Grupa Polmotor",
+    role: "Marketing Manager",
     company: "Polmotor Szczecin",
   },
 ];
@@ -53,7 +53,7 @@ function TestimonialCard({
             {t.name}
           </div>
           <div style={{ fontSize: 13, lineHeight: 1.5, marginTop: 4, color: "var(--color-text-muted)" }}>
-            {t.role} &middot; {t.company}
+            {t.role ? <>{t.role} &middot; {t.company}</> : t.company}
           </div>
         </div>
       </div>
@@ -79,7 +79,7 @@ export default function TestimonialsSection() {
           </svg>
           Opinie
         </div>
-        <h2 className="section-title reveal">{"Zaufali nam"}</h2>
+        <h2 className="section-title reveal">{"Opinie klientów"}</h2>
         <p className="section-sub reveal">
           {"Klienci, z którymi współpracujemy od lat"}
         </p>

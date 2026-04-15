@@ -24,13 +24,12 @@ export default function Hero() {
         </div>
 
         <h1 style={{ fontSize: "clamp(36px, 5.5vw, 64px)", fontWeight: 700, lineHeight: 1.1, letterSpacing: "-0.03em", marginBottom: 20 }}>
-          {"SEO, które przynosi"}
-          <br />
-          <span className="text-gradient">{"klientów, nie raporty"}</span>
+          {"OFERTA "}
+          <span className="text-gradient">{"SEO + AI + SXO"}</span>
         </h1>
 
         <p style={{ fontSize: 18, color: "var(--color-text-dim)", lineHeight: 1.6, maxWidth: 640, marginLeft: "auto", marginRight: "auto", marginBottom: 32 }}>
-          {"Nie sprzedajemy pozycji fraz — sprzedajemy realny wzrost ruchu, zapytań i przychodów z Google. Mierzysz efekty, nie obietnice."}
+          {"Bezterminowa umowa z 1-miesięcznym wypowiedzeniem."}
         </p>
 
         {/* Stats row */}

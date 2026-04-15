@@ -1,23 +1,23 @@
 const benefits = [
   {
-    color: "accent" as const,
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="w-6 h-6">
-        <path d="M12 20V10" /><path d="M18 20V4" /><path d="M6 20v-4" />
-      </svg>
-    ),
-    title: "Sta\u0142y dop\u0142yw klient\u00F3w z Google",
-    text: "Twoja strona pojawia si\u0119 tam, gdzie ludzie szukaj\u0105 Twoich us\u0142ug. Ka\u017Cdy miesi\u0105c to wi\u0119cej wej\u015B\u0107, telefon\u00F3w i formularzy \u2014 bez p\u0142acenia za klikni\u0119cie.",
-  },
-  {
     color: "blue" as const,
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="w-6 h-6">
         <circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" />
       </svg>
     ),
-    title: "Widoczno\u015B\u0107 w AI i asystentach",
-    text: "ChatGPT, Gemini i AI Overview to nowe \u201Ewyszukiwarki\u201D. Dostosujemy Tw\u00F3j content i technologi\u0119, \u017Ceby AI poleca\u0142a Twoj\u0105 firm\u0119 \u2014 nie konkurencj\u0119.",
+    title: "Widoczno\u015B\u0107 w Google i AI",
+    text: "Twoja strona zoptymalizowana pod klasyczne wyniki wyszukiwania oraz pod odpowiedzi generowane przez AI.",
+  },
+  {
+    color: "accent" as const,
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="w-6 h-6">
+        <path d="M12 2a4 4 0 0 1 4 4c0 1.95-2 4-4 4s-4-2.05-4-4a4 4 0 0 1 4-4z"/><path d="M20 21v-2a4 4 0 0 0-3-3.87"/><path d="M4 21v-2a4 4 0 0 1 3-3.87"/><circle cx="12" cy="17" r="4"/>
+      </svg>
+    ),
+    title: "Obecno\u015B\u0107 w asystentach AI",
+    text: "ChatGPT, Gemini, AI Overview \u2014 dostosowujemy content i technologi\u0119, \u017Ceby modele j\u0119zykowe cytowa\u0142y Twoj\u0105 firm\u0119.",
   },
   {
     color: "green" as const,
@@ -26,8 +26,8 @@ const benefits = [
         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
       </svg>
     ),
-    title: "Mierzalne efekty, nie obietnice",
-    text: "W ka\u017Cdym pakiecie masz konkretny KPI: liczb\u0119 wej\u015B\u0107, leady, klikni\u0119cia w telefon. Widzisz co dostajesz \u2014 nie zgadujesz.",
+    title: "Mierzalne dzia\u0142ania, nie obietnice",
+    text: "Konkretne KPI w ka\u017Cdym pakiecie: ruch organiczny, widoczno\u015B\u0107 fraz, obecno\u015B\u0107 w AI Overview.",
   },
   {
     color: "cyan" as const,
@@ -37,7 +37,7 @@ const benefits = [
       </svg>
     ),
     title: "Strona zbudowana pod algorytmy",
-    text: "Nie tylko content \u2014 poprawiamy szybko\u015B\u0107, struktur\u0119, schema markup i Core Web Vitals. Google i chatboty AI widz\u0105 Twoj\u0105 stron\u0119 jako autorytet.",
+    text: "Szybko\u015B\u0107, struktura, schema markup, Core Web Vitals \u2014 techniczny fundament widoczno\u015Bci.",
   },
   {
     color: "accent" as const,
@@ -47,7 +47,7 @@ const benefits = [
       </svg>
     ),
     title: "Dedykowany zesp\u00F3\u0142, nie automat",
-    text: "SEO-wiec, analityk, developer, copywriter \u2014 znasz ich z imienia. Omawiasz raporty z cz\u0142owiekiem, nie z dashboardem.",
+    text: "SEO-wiec, analityk, developer, copywriter \u2014 znasz ich z imienia.",
   },
   {
     color: "green" as const,
@@ -56,8 +56,8 @@ const benefits = [
         <rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" />
       </svg>
     ),
-    title: "Bez locka \u2014 zostajecie z wyboru",
-    text: "Umowa bezterminowa z 1-miesi\u0119cznym wypowiedzeniem. \u017Badnych kar, \u017Cadnych haczyk\u00F3w. 94% klient\u00F3w zostaje \u2014 bo widz\u0105 efekty.",
+    title: "Bez locka, zostajecie z wyboru",
+    text: "Umowa bezterminowa, 1-miesi\u0119czne wypowiedzenie. 94% klient\u00F3w zostaje.",
   },
 ];
 

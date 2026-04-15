@@ -61,7 +61,7 @@ export default function ContractBanner() {
               <strong style={{ color: "var(--color-text-secondary)" }}>
                 {"Nie ma locka na 12 miesięcy."}
               </strong>{" "}
-              {"Zostajecie, bo widzicie efekty — nie dlatego, że musicie. Wypowiedzenie na koniec dowolnego miesiąca, bez kar i haczyków. Nasza retencja to 94% — bo działamy tak, żebyście chcieli z nami być."}
+              {"Zostajecie, bo widzicie wartość naszej pracy — nie dlatego, że musicie. Wypowiedzenie na koniec dowolnego miesiąca, bez kar i haczyków. 95% klientów zostaje — bo działamy tak, żebyście chcieli z nami być. 100% wdrożenia aktywności pakietu co miesiąc."}
             </p>
           </div>
         </div>
